@@ -1,5 +1,4 @@
-[
-  {
+{
     "id": "88",
     "title": "Dashboard PortsIB",
     "columnDefinitions": "12,10,6,4,2",
@@ -8,526 +7,525 @@
     "columnWidth": "*",
     "sidebar": false,
     "items": [
-      {
-        "id": "1",
-        "widget": "SENSOR_BLOCKS",
-        "title": "ESTACIÓN DE VIENTO (FARO)",
-        "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "block": "SENSOR_OBSERVATION",
-            "title": "Observación",
-            "icon": "wind",
-            "orientation": "vertical",
-            "items": [
-              {
-                "title": "Viento medio",
-                "unit": "km/h",
-                "value": "wind_speed"
-              },
-              {
-                "title": "Dirección",
-                "unit": "°",
-                "value": "wind_direction"
-              }
+        {
+            "id": "1",
+            "widget": "SENSOR_BLOCKS",
+            "title": "ESTACIÓN DE VIENTO (FARO)",
+            "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "block": "SENSOR_OBSERVATION",
+                    "title": "Observación",
+                    "icon": "wind",
+                    "orientation": "vertical",
+                    "items": [
+                        {
+                            "title": "Viento medio",
+                            "unit": "km/h",
+                            "value": "wind_speed"
+                        },
+                        {
+                            "title": "Dirección",
+                            "unit": "°",
+                            "value": "wind_direction"
+                        }
+                    ],
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "wind_speed"
+                    }
+                }
             ],
-            "style": {
-              "color": [
-                {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
+            "dashboardConfig": {
+                "column": 0,
+                "row": 1,
+                "columnSpan": 3,
+                "rowSpan": 4,
+                "interaction": false,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundColor": "#30374B",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
                 }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "wind_speed"
             }
-          }
-        ],
-        "dashboardConfig": {
-          "column": 0,
-          "row": 1,
-          "columnSpan": 3,
-          "rowSpan": 4,
-          "interaction": false,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundColor": "#30374B",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
-          }
-        }
-      },
-      {
-        "id": "2",
-        "widget": "SENSOR_BLOCKS",
-        "title": "ESTACIÓN DE VIENTO (FARO)",
-        "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "block": "SENSOR_OBSERVATION",
-            "title": "Observación",
-            "icon": "wind",
-            "orientation": "vertical",
-            "items": [
-              {
-                "title": "Viento medio",
-                "unit": "km/h",
-                "value": "wind_speed"
-              },
-              {
-                "title": "Dirección",
-                "unit": "°",
-                "value": "wind_direction"
-              }
+        },
+        {
+            "id": "2",
+            "widget": "SENSOR_BLOCKS",
+            "title": "ESTACIÓN DE VIENTO (FARO)",
+            "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "block": "SENSOR_OBSERVATION",
+                    "title": "Observación",
+                    "icon": "wind",
+                    "orientation": "vertical",
+                    "items": [
+                        {
+                            "title": "Viento medio",
+                            "unit": "km/h",
+                            "value": "wind_speed"
+                        },
+                        {
+                            "title": "Dirección",
+                            "unit": "°",
+                            "value": "wind_direction"
+                        }
+                    ],
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "wind_speed"
+                    }
+                }
             ],
-            "style": {
-              "color": [
-                {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
+            "dashboardConfig": {
+                "column": 3,
+                "row": 1,
+                "columnSpan": 3,
+                "rowSpan": 4,
+                "interaction": false,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundColor": "#30374B",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
                 }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "wind_speed"
             }
-          }
-        ],
-        "dashboardConfig": {
-          "column": 3,
-          "row": 1,
-          "columnSpan": 3,
-          "rowSpan": 4,
-          "interaction": false,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundColor": "#30374B",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
-          }
-        }
-      },
-      {
-        "id": "3",
-        "widget": "SENSOR_BLOCKS",
-        "title": "ESTACIÓN DE VIENTO (FARO)",
-        "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "block": "SENSOR_OBSERVATION",
-            "title": "Observación",
-            "icon": "wind",
-            "orientation": "vertical",
-            "items": [
-              {
-                "title": "Viento medio",
-                "unit": "km/h",
-                "value": "wind_speed"
-              },
-              {
-                "title": "Dirección",
-                "unit": "°",
-                "value": "wind_direction"
-              }
+        },
+        {
+            "id": "3",
+            "widget": "SENSOR_BLOCKS",
+            "title": "ESTACIÓN DE VIENTO (FARO)",
+            "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "block": "SENSOR_OBSERVATION",
+                    "title": "Observación",
+                    "icon": "wind",
+                    "orientation": "vertical",
+                    "items": [
+                        {
+                            "title": "Viento medio",
+                            "unit": "km/h",
+                            "value": "wind_speed"
+                        },
+                        {
+                            "title": "Dirección",
+                            "unit": "°",
+                            "value": "wind_direction"
+                        }
+                    ],
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "wind_speed"
+                    }
+                }
             ],
-            "style": {
-              "color": [
-                {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
+            "dashboardConfig": {
+                "column": 6,
+                "row": 1,
+                "columnSpan": 3,
+                "rowSpan": 4,
+                "interaction": false,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)",
+                    "backgroundColor": "#30374B"
                 }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "wind_speed"
             }
-          }
-        ],
-        "dashboardConfig": {
-          "column": 6,
-          "row": 1,
-          "columnSpan": 3,
-          "rowSpan": 4,
-          "interaction": false,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)",
-            "backgroundColor": "#30374B"
-          }
-        }
-      },
-      {
-        "id": "4",
-        "widget": "SENSOR_BLOCKS",
-        "title": "ESTACIÓN DE VIENTO (TERMINAL)",
-        "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "block": "SENSOR_PREDICTION",
-            "title": "Predicción",
-            "unit": "km/h",
-            "style": {
-              "color": [
+        },
+        {
+            "id": "4",
+            "widget": "SENSOR_BLOCKS",
+            "title": "ESTACIÓN DE VIENTO (TERMINAL)",
+            "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
                 {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
+                    "block": "SENSOR_PREDICTION",
+                    "title": "Predicción",
+                    "unit": "km/h",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "VFinalCombinada"
+                    }
                 }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "VFinalCombinada"
-            }
-          }
-        ],
-        "dashboardConfig": {
-          "column": 6,
-          "row": 6,
-          "columnSpan": 3,
-          "rowSpan": 6,
-          "interaction": false,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
-          }
-        }
-      },
-      {
-        "id": "8",
-        "widget": "SENSOR_BLOCKS",
-        "title": "ESTACIÓN DE VIENTO (TERMINAL)",
-        "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "block": "SENSOR_PREDICTION",
-            "title": "Predicción",
-            "unit": "km/h",
-            "style": {
-              "color": [
-                {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
-                }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "VFinalCombinada"
-            }
-          }
-        ],
-        "dashboardConfig": {
-          "column": 3,
-          "row": 6,
-          "columnSpan": 3,
-          "rowSpan": 6,
-          "interaction": false,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
-          }
-        }
-      },
-      {
-        "id": "9",
-        "widget": "SENSOR_BLOCKS",
-        "title": "ESTACIÓN DE VIENTO (TERMINAL)",
-        "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "block": "SENSOR_PREDICTION",
-            "title": "Predicción",
-            "unit": "km/h",
-            "style": {
-              "color": [
-                {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
-                }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "VFinalCombinada"
-            }
-          }
-        ],
-        "dashboardConfig": {
-          "column": 0,
-          "row": 6,
-          "columnSpan": 3,
-          "rowSpan": 6,
-          "interaction": false,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
-          }
-        }
-      },
-      {
-        "id": "5",
-        "widget": "SENSOR_BLOCKS",
-        "title": "ESTACIÓN DE VIENTO (EXTERIOR)",
-        "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "block": "SENSOR_OBSERVATION",
-            "title": "Observación",
-            "icon": "wind",
-            "orientation": "horizontal",
-            "items": [
-              {
-                "title": "Agitación",
-                "unit": "ºF",
-                "value": "wind_speed"
-              },
-              {
-                "title": "Altura máx",
-                "unit": "m",
-                "value": "wind_direction"
-              }
             ],
-            "style": {
-              "color": [
-                {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
+            "dashboardConfig": {
+                "column": 6,
+                "row": 6,
+                "columnSpan": 3,
+                "rowSpan": 6,
+                "interaction": false,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
                 }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "wind_direction"
             }
-          },
-          {
-            "block": "SENSOR_PREDICTION",
-            "title": "Predicción",
-            "unit": "km/h",
-            "style": {
-              "color": [
+        },
+        {
+            "id": "8",
+            "widget": "SENSOR_BLOCKS",
+            "title": "ESTACIÓN DE VIENTO (TERMINAL)",
+            "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
                 {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
+                    "block": "SENSOR_PREDICTION",
+                    "title": "Predicción",
+                    "unit": "km/h",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "VFinalCombinada"
+                    }
                 }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "VFinalCombinada"
-            }
-          }
-        ],
-        "dashboardConfig": {
-          "column": 9,
-          "row": 3,
-          "columnSpan": 3,
-          "rowSpan": 11,
-          "interaction": false,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
-          }
-        }
-      },
-      {
-        "id": "6",
-        "widget": "SENSOR_BLOCKS",
-        "title": "MAREÓGRAFO (BOCANA)",
-        "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "block": "SENSOR_OBSERVATION",
-            "title": "Observación",
-            "icon": "wind",
-            "orientation": "horizontal",
-            "items": [
-              {
-                "title": "Agitación",
-                "unit": "ºF",
-                "value": "wind_speed"
-              },
-              {
-                "title": "Altura máx",
-                "unit": "m",
-                "value": "wind_direction"
-              }
             ],
-            "style": {
-              "color": [
-                {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
+            "dashboardConfig": {
+                "column": 3,
+                "row": 6,
+                "columnSpan": 3,
+                "rowSpan": 6,
+                "interaction": false,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
                 }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "wind_direction"
             }
-          },
-          {
-            "block": "SENSOR_PREDICTION",
-            "title": "Predicción",
-            "unit": "km/h",
-            "style": {
-              "color": [
+        },
+        {
+            "id": "9",
+            "widget": "SENSOR_BLOCKS",
+            "title": "ESTACIÓN DE VIENTO (TERMINAL)",
+            "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
                 {
-                  "condition": "{value} < 100",
-                  "value": "#ff0000"
-                },
-                {
-                  "condition": "{value} >= 100 && {value} <= 130",
-                  "value": "#ffa500"
-                },
-                {
-                  "condition": "{value} > 130",
-                  "value": "#ffff00"
+                    "block": "SENSOR_PREDICTION",
+                    "title": "Predicción",
+                    "unit": "km/h",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "VFinalCombinada"
+                    }
                 }
-              ],
-              "defaultColor": "#ffffff",
-              "useSeverity": true,
-              "severityValue": "VFinalCombinada"
+            ],
+            "dashboardConfig": {
+                "column": 0,
+                "row": 6,
+                "columnSpan": 3,
+                "rowSpan": 6,
+                "interaction": false,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
+                }
             }
-          }
-        ],
-        "dashboardConfig": {
-          "column": 9,
-          "row": 0,
-          "columnSpan": 3,
-          "rowSpan": 11,
-          "interaction": false,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
-          }
+        },
+        {
+            "id": "5",
+            "widget": "SENSOR_BLOCKS",
+            "title": "ESTACIÓN DE VIENTO (EXTERIOR)",
+            "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "block": "SENSOR_OBSERVATION",
+                    "title": "Observación",
+                    "icon": "wind",
+                    "orientation": "horizontal",
+                    "items": [
+                        {
+                            "title": "Agitación",
+                            "unit": "ºF",
+                            "value": "wind_speed"
+                        },
+                        {
+                            "title": "Altura máx",
+                            "unit": "m",
+                            "value": "wind_direction"
+                        }
+                    ],
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "wind_direction"
+                    }
+                },
+                {
+                    "block": "SENSOR_PREDICTION",
+                    "title": "Predicción",
+                    "unit": "km/h",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "VFinalCombinada"
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 9,
+                "row": 3,
+                "columnSpan": 3,
+                "rowSpan": 11,
+                "interaction": false,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
+                }
+            }
+        },
+        {
+            "id": "6",
+            "widget": "SENSOR_BLOCKS",
+            "title": "MAREÓGRAFO (BOCANA)",
+            "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "block": "SENSOR_OBSERVATION",
+                    "title": "Observación",
+                    "icon": "wind",
+                    "orientation": "horizontal",
+                    "items": [
+                        {
+                            "title": "Agitación",
+                            "unit": "ºF",
+                            "value": "wind_speed"
+                        },
+                        {
+                            "title": "Altura máx",
+                            "unit": "m",
+                            "value": "wind_direction"
+                        }
+                    ],
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "wind_direction"
+                    }
+                },
+                {
+                    "block": "SENSOR_PREDICTION",
+                    "title": "Predicción",
+                    "unit": "km/h",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} < 100",
+                                "value": "#ff0000"
+                            },
+                            {
+                                "condition": "{value} >= 100 && {value} <= 130",
+                                "value": "#ffa500"
+                            },
+                            {
+                                "condition": "{value} > 130",
+                                "value": "#ffff00"
+                            }
+                        ],
+                        "defaultColor": "#ffffff",
+                        "useSeverity": true,
+                        "severityValue": "VFinalCombinada"
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 9,
+                "row": 0,
+                "columnSpan": 3,
+                "rowSpan": 11,
+                "interaction": false,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
+                }
+            }
+        },
+        {
+            "id": "7",
+            "widget": "GIS_MAP",
+            "title": "Rentabilidad por mercado",
+            "sourceData": "DEMO_GIS_RETABILIDAD",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "imageType": "assets",
+                    "source": "gis_static_monetize.png",
+                    "minWidth": "200"
+                }
+            ],
+            "dashboardConfig": {
+                "column": 0,
+                "row": 0,
+                "columnSpan": 9,
+                "rowSpan": 12,
+                "interaction": true,
+                "resize": false,
+                "drag": true,
+                "style": {
+                    "borderWidget": "1px solid #495067",
+                    "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
+                }
+            }
         }
-      },
-      {
-        "id": "7",
-        "widget": "GIS_MAP",
-        "title": "Rentabilidad por mercado",
-        "sourceData": "DEMO_GIS_RETABILIDAD",
-        "zIndex": 0,
-        "itemsConfig": [],
-        "instanceConfig": [
-          {
-            "imageType": "assets",
-            "source": "gis_static_monetize.png",
-            "minWidth": "200"
-          }
-        ],
-        "dashboardConfig": {
-          "column": 0,
-          "row": 0,
-          "columnSpan": 9,
-          "rowSpan": 12,
-          "interaction": true,
-          "resize": false,
-          "drag": true,
-          "style": {
-            "borderWidget": "1px solid #495067",
-            "backgroundHeader": "linear-gradient(266.91deg, #495067 -2.06%, rgba(221, 189, 114, 0) 38.42%)"
-          }
-        }
-      }
     ]
-  }
-]
+}

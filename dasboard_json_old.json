@@ -37,7 +37,7 @@
             }
         ]
     },
-    "items": [  
+    "items": [
         {
             "id": "SYNC_CHART_1",
             "widget": "SYNC_CHART",
