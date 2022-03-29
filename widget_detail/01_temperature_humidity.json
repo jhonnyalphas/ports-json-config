@@ -1,0 +1,52 @@
+{
+    "id": 5,
+    "widget": "TEMPERATURE_SENSOR",
+    "title": "Temperature",
+    "sourceData": "TEMPERATURE_SENSOR_DATA_SOURCE",
+    "zIndex": 0,
+    "itemsConfig": [
+        {
+            "id": "K#TEMPERATURE_COLUMN||TEMPERATURE",
+            "showInLegend": true,
+            "tooltip": {
+                "prefix": "",
+                "suffix": "C"
+            }
+        },
+        {
+            "id": "K#HUMIDITY_COLUMN||HUMIDITY",
+            "showInLegend": true,
+            "tooltip": {
+                "prefix": "",
+                "suffix": "%"
+            }
+        }
+    ],
+    "instanceConfig": [
+        {
+            "id": "K#TEMPERATURE_GAUGE",
+            "orientation": "vertical"
+        },
+        {
+            "id": "K#HUMIDITY_GAUGE",
+            "orientation": "vertical",
+            "style": {
+                "deafultColor": "#888FA830",
+                "useSeverity": false
+            }
+        }
+    ],
+    "dashboardConfig": {
+        "column": 0,
+        "row": 0,
+        "columnSpan": 4,
+        "rowSpan": 1,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
+    }
+}

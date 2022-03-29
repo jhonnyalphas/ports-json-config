@@ -1,0 +1,72 @@
+{
+    "id": 3,
+    "widget": "RADAR_CHART",
+    "title": "Accumulates Wind Direction",
+    "sourceData": "WIND_SENSOR_DATASOURCE",
+    "zIndex": 0,
+    "itemsConfig": [],
+    "instanceConfig": [
+        {
+            "orientation": "horizontal",
+            "style": {
+                "color": [
+                    {
+                        "condition": "{value} >= 0 && {value} <= 3",
+                        "value": "#009bbb"
+                    },
+                    {
+                        "condition": "{value} > 3 && {value} <= 6",
+                        "value": "#ea6d13"
+                    },
+                    {
+                        "condition": "{value} > 6 && {value} <= 10",
+                        "value": "#4c44a6"
+                    },
+                    {
+                        "condition": "{value} > 10 && {value} <= 13",
+                        "value": "#fcd401"
+                    },
+                    {
+                        "condition": "{value} > 13 && {value} <= 16",
+                        "value": "#ca2c36"
+                    },
+                    {
+                        "condition": "{value} > 32",
+                        "value": "#b66bb8"
+                    }
+                ],
+                "defaultColor": "#009bbb",
+                "useSeverity": true,
+                "severityValue": "wind_speed"
+            },
+            "legend": true,
+            "tooltip": {
+                "isHtmlFormat": "false",
+                "valueDecimals": "2",
+                "borderWidth": 1,
+                "backgroundColor": "none",
+                "pointFormat": "{point.y}",
+                "headerFormat": "",
+                "footerFormat": "",
+                "shadow": true,
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#fff"
+                }
+            }
+        }
+    ],
+    "dashboardConfig": {
+        "column": 8,
+        "row": 0,
+        "columnSpan": 4,
+        "rowSpan": 1,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
+    }
+}

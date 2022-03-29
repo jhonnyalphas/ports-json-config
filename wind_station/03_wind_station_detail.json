@@ -1,0 +1,121 @@
+{
+    "id": 6,
+    "widget": "WIND_DETAIL_CHART",
+    "title": "Estación de Viento (Faro)",
+    "sourceData": "WIND_STATION_DETAIL",
+    "zIndex": 0,
+    "itemsConfig": [
+        [
+            {
+                "id": "K#WIND_SENSOR_DATA||WIND_BARB",
+                "type": "windbarb",
+                "name": "Viento",
+                "fillColor": "#ABB0BF",
+                "fillOpacity": 1.0,
+                "showInLegend": false,
+                "tooltip": {
+                    "suffix": " m/s",
+                    "prefix": ""
+                }
+            },
+            {
+                "id": "K#WIND_SENSOR_DATA||CURRENT_WIND_SPEED",
+                "type": "line",
+                "name": "Velocidad Normal",
+                "fillColor": "#009BBB",
+                "fillOpacity": 1.0,
+                "showInLegend": true,
+                "tooltip": {
+                    "suffix": " Km/h",
+                    "prefix": ""
+                }
+            },
+            {
+                "id": "K#WIND_SENSOR_DATA||MAX_WIND_SPEED",
+                "type": "arearange",
+                "name": "Velocidad Máxima",
+                "fillColor": "#009BBB",
+                "fillOpacity": 0.5,
+                "showInLegend": true,
+                "tooltip": {
+                    "suffix": " Km/h",
+                    "prefix": ""
+                }
+            },
+            {
+                "id": "K#WIND_SENSOR_DATA||WIND_OBSERVATION",
+                "type": "areaspline",
+                "fillColor": "#E0BD07",
+                "fillOpacity": 0.5,
+                "showInLegend": false,
+                "tooltip": {
+                    "suffix": " Km/h",
+                    "prefix": ""
+                }
+            },
+            {
+                "id": "K#WIND_SENSOR_DATA||WIND_PREDICTION",
+                "type": "areaspline",
+                "fillColor": "#CA2C36",
+                "fillOpacity": 0.5,
+                "showInLegend": false,
+                "tooltip": {
+                    "suffix": " Km/h",
+                    "prefix": ""
+                }
+            }
+        ]
+    ],
+    "instanceConfig": [
+        {
+            "id": "K#WIND_SENSOR_DATA",
+            "type": "windbarb",
+            "legend": {
+                "enabled": true
+            },
+            "xAxisFormat": "",
+            "yAxisTitle": "",
+            "title": {
+                "type": "text",
+                "text": "Estación de Viento (Faro)",
+                "style": {
+                    "color": "#fff",
+                    "align": "center",
+                    "margin": "0",
+                    "fontSize": "14px"
+                }
+            },
+            "description": {
+                "type": "text",
+                "text": "",
+                "style": {
+                    "color": "#fff",
+                    "align": "center",
+                    "margin": "0",
+                    "fontSize": "18px"
+                }
+            },
+            "tooltip": {
+                "isHtmlFormat": "false",
+                "valueDecimals": "2",
+                "borderWidth": 1,
+                "backgroundColor": "none",
+                "pointFormat": "{point.y}",
+                "headerFormat": "",
+                "footerFormat": "",
+                "shadow": true,
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#fff"
+                }
+            }
+        }
+    ],
+    "dashboardConfig": {
+        "column": 1,
+        "row": 0,
+        "columnSpan": 3,
+        "rowSpan": 2,
+        "interaction": false
+    }
+}

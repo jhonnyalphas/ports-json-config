@@ -1,0 +1,152 @@
+{
+    "id": 100,
+    "enabled": true,
+    "name": "Smart Weather",
+    "type": "sidebar",
+    "platform": "web",
+    "content": {
+        "width": "300",
+        "height": "*",
+        "enableShare": true,
+        "items": [
+            {
+                "module": "MODULE_DISPLAY_CALENDAR",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "options": {
+                            "enableDateMultiSelect": false,
+                            "enableDateRange": true
+                        }
+                    }
+                ]
+            },
+            {
+                "module": "MODULE_WIDGET_CAROUSEL",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "itemShowNumber": 3,
+                        "items": [
+                            "WIDGET_COMPARE_CHART",
+                            "WIDGET_DELTA_TABLE",
+                            "WIDGET_DATA_TABLE",
+                            "WIDGET_GIS",
+                            "WIDGET_PIE",
+                            "WIDGET_GRAPH",
+                            "WIDGET_WIND_ROSE",
+                            "WIDGET_GAUGE",
+                            "WIDGET_SENSOR",
+                            "WIDGET_THERMAL"
+                        ]
+                    }
+                ]
+            },
+            {
+                "module": "MODULE_WIDGET_WATCHER",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "style": {
+                            "accentColor": "#009bbb",
+                            "defaultColor": "#009bbb"
+                        },
+                        "items": [
+                            {
+                                "id": "M#NETWORK_FILTER",
+                                "type": "filter",
+                                "url": "NETWORK_URL",
+                                "filters": [
+                                    {
+                                        "id": "F#NETWORK_SEARCH",
+                                        "name": "network",
+                                        "type": "text",
+                                        "url": "",
+                                        "queryParam": "query",
+                                        "parent": ""
+                                    },
+                                    {
+                                        "id": "F#SENSOR_SELECT",
+                                        "name": "sensor",
+                                        "type": "select",
+                                        "url": "",
+                                        "queryParam": "query",
+                                        "parent": "F#NETWORK_SEARCH"
+                                    },
+                                    {
+                                        "id": "F#LOCATION_SELECT",
+                                        "name": "location",
+                                        "type": "select",
+                                        "url": "",
+                                        "queryParam": "query",
+                                        "parent": "F#SENSOR_SELECT"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "M#NETWORK_FILTER",
+                                "type": "filter",
+                                "url": "NETWORK_URL",
+                                "filters": [
+                                    {
+                                        "id": "F#NETWORK_SEARCH",
+                                        "name": "network",
+                                        "type": "text",
+                                        "url": "",
+                                        "queryParam": "network"
+                                    },
+                                    {
+                                        "id": "F#SENSOR_SELECT||NETWORK_SEARCH",
+                                        "name": "sensor",
+                                        "type": "select",
+                                        "url": "",
+                                        "queryParam": "sensor"
+                                    },
+                                    {
+                                        "id": "F#LOCATION_SELECT||SENSOR_SELECT",
+                                        "name": "location",
+                                        "type": "select",
+                                        "url": "",
+                                        "queryParam": "location"
+                                    }
+                                ]
+                            }
+                        ],
+                        "options": {
+                            "enableVisualSettings": true,
+                            "enableSqlAdvanced": false
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "module": "MODULE_WIDGET_BUSINESS_INTELLIGENCE",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "orientation": "vertical",
+                        "style": {
+                            "accentColor": "#009bbb",
+                            "defaultColor": "#009bbb"
+                        },
+                        "items": [
+                            "SPINNER_PARAMETER_AUDIT",
+                            "SPINNER_WORST_OFFENDER",
+                            "SPINNER_EVOLUTION",
+                            "SPINNER_DRILL_DOWN",
+                            "SPINNER_CORRELATION",
+                            "SPINNER_CELL_DISTRIBUTION",
+                            "SPINNER_TROUBLESHOOTING",
+                            "SPINNER_MASTER_LIST"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

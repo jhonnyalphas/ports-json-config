@@ -1,0 +1,67 @@
+{
+    "id": 5,
+    "widget": "ACTIVITY_GAUGE",
+    "title": "Solar and UV Radiation",
+    "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+    "zIndex": 0,
+    "itemsConfig": [
+        {
+            "id": "K#RADIATION_GAUGE||SOLAR_RADIATION",
+            "fillColor": "#009bbb",
+            "showInLegend": true,
+            "tooltip": {
+                "prefix": "",
+                "suffix": "W/m2"
+            }
+        }
+    ],
+    "instanceConfig": [
+        {
+            "id": "K#RADIATION_GAUGE",
+            "legend": {
+                "enabled": true
+            },
+            "orientation": "vertical",
+            "style": {
+                "color": [
+                    {
+                        "condition": "{value} < 3",
+                        "value": "#adff2f"
+                    },
+                    {
+                        "condition": "{value} >= 3 && {value} < 6",
+                        "value": "#fefe33"
+                    },
+                    {
+                        "condition": "{value} >= 6 && {value} < 8",
+                        "value": "##ff8c00"
+                    },
+                    {
+                        "condition": "{value} >= 9 && {value} < 11",
+                        "value": "#dc143c"
+                    },
+                    {
+                        "condition": "{value} >= 11",
+                        "value": "#9370db"
+                    }
+                ],
+                "defaultColor": "#009bbb",
+                "useSeverity": true,
+                "severityValue": "uv_level"
+            }
+        }
+    ],
+    "dashboardConfig": {
+        "column": 0,
+        "row": 0,
+        "columnSpan": 4,
+        "rowSpan": 1,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
+    }
+}

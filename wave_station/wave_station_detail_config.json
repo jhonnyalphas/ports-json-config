@@ -1,0 +1,208 @@
+{
+    "id": 101,
+    "name": "Dashboard - Detalle Mareógrafo Levante",
+    "type": "dashboard",
+    "platform": "web",
+    "content": {
+        "title": "Mareógrafo (Levante)",
+        "columnDefinitions": "12,10,6,4,2",
+        "rowDefinitions": 2,
+        "rowHeight": "300",
+        "columnWidth": "*",
+        "sidebar": false,
+        "items": [
+            {
+                "id": 1,
+                "widget": "SYNC_CHART",
+                "title": "Mareógrafo (Bocana)",
+                "sourceData": "WAVE_DATA",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "type": "column",
+                        "legend": {
+                            "enabled": true
+                        },
+                        "xAxisFormat": "{value:%HH-%mm}",
+                        "yAxisTitle": "",
+                        "title": {
+                            "text": "Mareógrafo (Bocana)",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "description": {
+                            "text": "",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} <= 5",
+                                    "value": "#DBDFEE"
+                                },
+                                {
+                                    "condition": "{value} > 5 && {value} <= 10",
+                                    "value": "#E0BD07"
+                                },
+                                {
+                                    "condition": "{value} > 10 && {value} <= 15",
+                                    "value": "#EA6D13"
+                                },
+                                {
+                                    "condition": "{value} > 15",
+                                    "value": "#CA2C36"
+                                }
+                            ],
+                            "defaultColor": "#DBDFEE",
+                            "useSeverity": true,
+                            "severityValue": "wave_level"
+                        },
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "18px",
+                                "color": "#fff"
+                            }
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 6,
+                    "rowSpan": 3,
+                    "interaction": false
+                }
+            },
+            {
+                "id": 2,
+                "widget": "SYNC_CHART",
+                "title": "Actual Mareógrafo (Bocana)",
+                "sourceData": "WAVE_DATA",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "type": "column",
+                        "legend": {
+                            "enabled": true
+                        },
+                        "xAxisFormat": "{value:%HH-%mm}",
+                        "yAxisTitle": "",
+                        "title": {
+                            "text": "Mareógrafo Actual (Bocana)",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "description": {
+                            "text": "",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} <= 5",
+                                    "value": "#DBDFEE"
+                                },
+                                {
+                                    "condition": "{value} > 5 && {value} <= 10",
+                                    "value": "#E0BD07"
+                                },
+                                {
+                                    "condition": "{value} > 10 && {value} <= 15",
+                                    "value": "#EA6D13"
+                                },
+                                {
+                                    "condition": "{value} > 15",
+                                    "value": "#CA2C36"
+                                }
+                            ],
+                            "defaultColor": "#DBDFEE",
+                            "useSeverity": true,
+                            "severityValue": "wave_level"
+                        },
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "18px",
+                                "color": "#fff"
+                            }
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 6,
+                    "row": 0,
+                    "columnSpan": 6,
+                    "rowSpan": 3,
+                    "interaction": false
+                }
+            },
+            {
+                "id": 3,
+                "widget": "DATA_TABLE",
+                "title": "DAILY_SUMMARY_DATA",
+                "sourceData": "WIND_STATION_DETAIL_SUMMARY",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 3,
+                    "columnSpan": 6,
+                    "rowSpan": 1,
+                    "interaction": false
+                }
+            },
+            {
+                "id": 4,
+                "widget": "DATA_TABLE",
+                "title": "DAILY_SUMMARY_DATA",
+                "sourceData": "WIND_STATION_DETAIL_SUMMARY",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [],
+                "dashboardConfig": {
+                    "column": 6,
+                    "row": 1,
+                    "columnSpan": 6,
+                    "rowSpan": 1,
+                    "interaction": false
+                }
+            }
+        ]
+    }
+}

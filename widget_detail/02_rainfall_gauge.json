@@ -1,0 +1,48 @@
+{
+    "id": 5,
+    "widget": "RANFALL_SENSOR",
+    "title": "Rainfall",
+    "sourceData": "ACCUMULATE_RAINFALL_DATA",
+    "zIndex": 0,
+    "itemsConfig": [
+        {
+            "id": "K#RAINFALL_COLUMN||ACCUMULATE_RAINFALL",
+            "showInLegend": true,
+            "tooltip": {
+                "prefix": "",
+                "suffix": "/m2"
+            }
+        },
+        {
+            "id": "K#HUMIDITY_COLUMN||HUMIDITY",
+            "showInLegend": true,
+            "tooltip": {
+                "prefix": "",
+                "suffix": "%"
+            }
+        }
+    ],
+    "instanceConfig": [
+        {
+            "id": "K#RAINFALL_COLUMN",
+            "orientation": "vertical",
+            "style": {
+                "defaultColor": "#009BBB",
+                "useSeverity": false
+            }
+        }
+    ],
+    "dashboardConfig": {
+        "column": 0,
+        "row": 0,
+        "columnSpan": 4,
+        "rowSpan": 1,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
+    }
+}

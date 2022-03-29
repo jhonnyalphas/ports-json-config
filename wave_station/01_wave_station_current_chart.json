@@ -1,0 +1,80 @@
+{
+  "id": 9,
+  "widget": "SYNC_CHART",
+  "title": "Actual Mareógrafo (Bocana)",
+  "sourceData": "WAVE_DATA_SOURCE",
+  "zIndex": 0,
+  "itemsConfig": [],
+  "instanceConfig": [
+    {
+      "type": "column",
+      "legend": {
+        "enabled": true
+      },
+      "xAxisFormat": "{value:%HH-%mm}",
+      "yAxisTitle": "",
+      "title": {
+        "text": "Mareógrafo Actual (Bocana)",
+        "style": {
+          "color": "#fff",
+          "align": "center",
+          "margin": "0",
+          "fontSize": "14px"
+        }
+      },
+      "description": {
+        "text": "",
+        "style": {
+          "color": "#fff",
+          "align": "center",
+          "margin": "0",
+          "fontSize": "14px"
+        }
+      },
+      "style": {
+        "color": [
+          {
+            "condition": "{value} <= 5",
+            "value": "#DBDFEE"
+          },
+          {
+            "condition": "{value} > 5 && {value} <= 10",
+            "value": "#E0BD07"
+          },
+          {
+            "condition": "{value} > 10 && {value} <= 15",
+            "value": "#EA6D13"
+          },
+          {
+            "condition": "{value} > 15",
+            "value": "#CA2C36"
+          }
+        ],
+        "defaultColor": "#DBDFEE",
+        "useSeverity": true,
+        "severityValue": "wave_level"
+      },
+      "tooltip": {
+        "isHtmlFormat": "false",
+        "valueDecimals": "2",
+        "borderWidth": 1,
+        "backgroundColor": "none",
+        "pointFormat": "{point.y}",
+        "headerFormat": "",
+        "footerFormat": "",
+        "shadow": true,
+        "style": {
+          "fontSize": "18px",
+          "color": "#fff"
+        }
+      }
+    }
+  ],
+  "dashboardConfig": {
+    "column": 6,
+    "row": 0,
+    "columnSpan": 6,
+    "rowSpan": 3,
+    "interaction": false
+  }
+}

@@ -1,0 +1,1481 @@
+{
+    "title": "Dashboard de calidad rentable",
+    "columnDefinitions": "12,10,6,4,2",
+    "rowDefinitions": 7,
+    "rowHeight": "300",
+    "columnWidth": "*",
+    "sidebar": {
+        "enabled": true,
+        "width": "300",
+        "height": "*",
+        "title": "Sidebar",
+        "content": [
+            {
+                "type": "datetime",
+                "widget": "modern_sidebar",
+                "granularity": [
+                    "24h",
+                    "7d",
+                    "30d"
+                ],
+                "queryParam": "arrayFilterDate"
+            },
+            {
+                "type": "text",
+                "widget": "text_field",
+                "queryParam": "query"
+            },
+            {
+                "type": "text",
+                "widget": "select2",
+                "options": [
+                    "1|AZRQ1",
+                    "2|AZRQ2",
+                    "3|AZRQ3"
+                ],
+                "queryParam": "region"
+            }
+        ]
+    },
+    "items": [  
+        {
+            "id": "SYNC_CHART_1",
+            "widget": "SYNC_CHART",
+            "title": "Rentability",
+            "sourceData": "QUALITY_RENTABILITY_DATA",
+            "zIndex": 0,
+            "itemsConfig": [
+                {
+                    "id": "K#PROFITABILITY||REGION_0",
+                    "fillColor": "#04a999",
+                    "fillOpacity": 1,
+                    "tooltip": {
+                        "suffix": "",
+                        "prefix": ""
+                    }
+                },
+                {
+                    "id": "K#TOTAL_EXPENSES||REGION_0",
+                    "fillColor": "#828123",
+                    "fillOpacity": 0.7,
+                    "tooltip": {
+                        "suffix": "",
+                        "prefix": ""
+                    }
+                },
+                {
+                    "id": "K#TOTAL_EXPENSES||REGION_1",
+                    "fillColor": "#701123",
+                    "fillOpacity": 0.8,
+                    "tooltip": {
+                        "suffix": "",
+                        "prefix": ""
+                    }
+                },
+                {
+                    "id": "K#TOTAL_EXPENSES||REGION_2",
+                    "fillColor": "#639123",
+                    "fillOpacity": 0.7,
+                    "tooltip": {
+                        "suffix": "",
+                        "prefix": ""
+                    }
+                },
+                {
+                    "id": "K#TOTAL_INCOMES||REGION_0",
+                    "fillColor": "#610123",
+                    "fillOpacity": 1,
+                    "tooltip": {
+                        "suffix": "",
+                        "prefix": ""
+                    }
+                },
+                {
+                    "id": "K#TOTAL_INCOMES||REGION_1",
+                    "fillColor": "#941543",
+                    "fillOpacity": 1,
+                    "tooltip": {
+                        "suffix": "",
+                        "prefix": ""
+                    }
+                },
+                {
+                    "id": "K#TOTAL_INCOMES||REGION_2",
+                    "fillColor": "#156123",
+                    "fillOpacity": 1,
+                    "tooltip": {
+                        "suffix": "",
+                        "prefix": ""
+                    }
+                }
+            ],
+            "instanceConfig": [
+                {
+                    "id": "K#TOTAL_INCOMES",
+                    "type": "area",
+                    "legend": {
+                        "enabled": false
+                    },
+                    "xAxisFormat": "- {value}",
+                    "yAxisTitle": "",
+                    "title": {
+                        "type": "text",
+                        "text": "Ingresos Totales",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "description": {
+                        "type": "text",
+                        "text": "Resumen de ingresos totales",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "12px"
+                        }
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "valueDecimals": "2",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{point.y}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                },
+                {
+                    "id": "K#TOTAL_EXPENSES",
+                    "type": "area",
+                    "legend": {
+                        "enabled": false
+                    },
+                    "xAxisFormat": "- {value}",
+                    "yAxisTitle": "",
+                    "title": {
+                        "type": "text",
+                        "text": "Gastos Totales",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "description": {
+                        "type": "text",
+                        "text": "Resumen de gastos totales",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "12px"
+                        }
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "valueDecimals": "2",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{point.y}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                },
+                {
+                    "id": "K#PROFITABILITY",
+                    "type": "spline",
+                    "legend": {
+                        "enabled": false
+                    },
+                    "xAxisFormat": "- {value}",
+                    "yAxisTitle": "",
+                    "title": {
+                        "type": "text",
+                        "text": "Rentabilidad Total",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "description": {
+                        "type": "text",
+                        "text": "Resumen de rentabilidad",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "12px"
+                        }
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "valueDecimals": "2",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{point.y}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 2,
+                "row": 0,
+                "columnSpan": 8,
+                "rowSpan": 4,
+                "interaction": false,
+                "resize": true,
+                "drag": true
+            }
+        },
+        {
+            "id": "PIE_GRAPH_MAP_1",
+            "widget": "PIE_GRAPH_MAP",
+            "title": "Pie graphs map",
+            "sourceData": "QUALITY_RENTABILITY_BY_DATE",
+            "zIndex": 0,
+            "orientation": "vertical",
+            "order": [
+                "CIRCLE_GRAPH",
+                "COLUMN_GRAPH",
+                "BARS_GRAPH",
+                "MAP_GRAPH"
+            ],
+            "itemsConfig": [
+                {
+                    "id": "ACC_PS",
+                    "type": "BARS_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 4000",
+                                "value": "#46FC02"
+                            },
+                            {
+                                "condition": "{value} > 3000 && {value} < 3800",
+                                "value": "#FD8600"
+                            },
+                            {
+                                "condition": "{value} <= 3000",
+                                "value": "#FD0000"
+                            }
+                        ],
+                        "defaultColor": "#46FC02",
+                        "useSeverity": true,
+                        "severityValue": "severity_value"
+                    }
+                },
+                {
+                    "id": "ACC_CS",
+                    "type": "BARS_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 20000",
+                                "value": "#46FC02"
+                            },
+                            {
+                                "condition": "{value} > 20000 && {value} < 19000",
+                                "value": "#FD8600"
+                            },
+                            {
+                                "condition": "{value} <= 19000",
+                                "value": "#FD0000"
+                            }
+                        ],
+                        "defaultColor": "#46FC02",
+                        "useSeverity": true,
+                        "severityValue": "severity_value"
+                    }
+                },
+                {
+                    "id": "SERIE_ID",
+                    "type": "COLUMN_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 100",
+                                "value": "#46FC02"
+                            },
+                            {
+                                "condition": "{value} > 50 && {value} < 100",
+                                "value": "#FD8600"
+                            },
+                            {
+                                "condition": "{value} <= 50",
+                                "value": "#FD0000"
+                            }
+                        ],
+                        "defaultColor": "#46FC02",
+                        "useSeverity": true
+                    }
+                }
+            ],
+            "instanceConfig": [
+                {
+                    "id": "CIRCLE_GRAPH",
+                    "domain": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": "#ffa500",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "title": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": "#ffffff",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "label": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": "#ffffff",
+                            "margin": 0,
+                            "fontSize": "14px"
+                        }
+                    },
+                    "wtype": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": "#ffa500",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "main_value": {
+                        "textFormat": "{value:.1f}%",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 80",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} > 50 && {value} < 80",
+                                    "value": "#FD8600"
+                                },
+                                {
+                                    "condition": "{value} <= 50",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": false,
+                            "severityValue": "value",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "display": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 80",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} > 50 && {value} < 80",
+                                    "value": "#FD8600"
+                                },
+                                {
+                                    "condition": "{value} <= 50",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "value",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "up_left": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#FD8600"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "down_left",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "up_center": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#FD8600"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "down_center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "up_right": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#FD8600"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "up_right",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "down_left": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#FD8600"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "down_left",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "down_center": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#FD8600"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "down_center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "down_right": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#FD8600"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "up_right",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "value": {
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} > 0",
+                                    "value": "#46FC02"
+                                },
+                                {
+                                    "condition": "{value} < 0",
+                                    "value": "#FD0000"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "circle_color_value"
+                        }
+                    }
+                },
+                {
+                    "id": "COLUMN_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 100",
+                                "value": "#46FC02"
+                            },
+                            {
+                                "condition": "{value} > 50 && {value} < 100",
+                                "value": "#FD8600"
+                            },
+                            {
+                                "condition": "{value} <= 50",
+                                "value": "#FD0000"
+                            }
+                        ],
+                        "defaultColor": "#46FC02",
+                        "useSeverity": true
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{point.y}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                },
+                {
+                    "id": "BARS_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 92",
+                                "value": "#46FC02"
+                            },
+                            {
+                                "condition": "{value} > 90 && {value} < 92",
+                                "value": "#FD8600"
+                            },
+                            {
+                                "condition": "{value} <= 90",
+                                "value": "#FD0000"
+                            }
+                        ],
+                        "defaultColor": "#46FC02",
+                        "useSeverity": true,
+                        "severityValue": "severity_value"
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{point.y}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                },
+                {
+                    "id": "MAP_GRAPH",
+                    "map_country": "MEXICO",
+                    "map_type": "REGIONS",
+                    "map_provider": "AT&T",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 100",
+                                "value": "#46FC02"
+                            },
+                            {
+                                "condition": "{value} > 50 && {value} < 100",
+                                "value": "#FD8600"
+                            },
+                            {
+                                "condition": "{value} <= 50",
+                                "value": "#FD0000"
+                            }
+                        ],
+                        "defaultColor": "#46FC02",
+                        "useSeverity": true
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "borderWidth": 1,
+                        "backgroundColor": "#ffffff",
+                        "pointFormat": "{region}<br />3G Composite Quality<br />{point.y}<br>",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": false,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 0,
+                "row": 0,
+                "columnSpan": 2,
+                "rowSpan": 4,
+                "interaction": false,
+                "resize": false,
+                "drag": true
+            }
+        },
+        {
+            "id": "DONUT_3D_GRAPH_1",
+            "widget": "DONUT_3D_GRAPH",
+            "title": "Rentability",
+            "sourceData": "RENTABILITY_COMPARATION",
+            "zIndex": 0,
+            "itemsConfig": [
+                {
+                    "id": "RENTABLE",
+                    "fillColor": "orange",
+                    "fillOpacity": 0.6
+                },
+                {
+                    "id": "NO_RENTABLE",
+                    "fillColor": "red",
+                    "fillOpacity": 0.6
+                }
+            ],
+            "instanceConfig": [
+                {
+                    "enabled3d": true,
+                    "percentage": true,
+                    "innerSize": "100",
+                    "depth": "45",
+                    "alpha": "45",
+                    "legend": {
+                        "enabled": false
+                    },
+                    "title": {
+                        "text": "Sitios Rentables y no Rentables",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "description": {
+                        "text": "",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "14px"
+                        }
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 0,
+                "row": 4,
+                "columnSpan": 2,
+                "rowSpan": 3,
+                "interaction": true,
+                "resize": true,
+                "drag": true
+            }
+        },
+        {
+            "id": "PIE_GRAPH_MAP_2",
+            "widget": "PIE_GRAPH_MAP",
+            "title": "Pie graphs map",
+            "sourceData": "QUALITY_RENTABILITY_BY_DATE_2",
+            "zIndex": 0,
+            "orientation": "vertical",
+            "order": [
+                "CIRCLE_GRAPH",
+                "COLUMN_GRAPH",
+                "MAP_GRAPH",
+                "BARS_GRAPH"
+            ],
+            "itemsConfig": [
+                {
+                    "id": "ACC_PS",
+                    "type": "BARS_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 4000",
+                                "value": "#247BA0"
+                            },
+                            {
+                                "condition": "{value} > 3000 && {value} < 3800",
+                                "value": "#0A2463"
+                            },
+                            {
+                                "condition": "{value} <= 3000",
+                                "value": "#FB3640"
+                            }
+                        ],
+                        "defaultColor": "#FB3640",
+                        "useSeverity": true,
+                        "severityValue": "severity_value"
+                    }
+                },
+                {
+                    "id": "ACC_CS",
+                    "type": "BARS_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 20000",
+                                "value": "#247BA0"
+                            },
+                            {
+                                "condition": "{value} > 20000 && {value} < 19000",
+                                "value": "#0A2463"
+                            },
+                            {
+                                "condition": "{value} <= 19000",
+                                "value": "#FB3640"
+                            }
+                        ],
+                        "defaultColor": "#FB3640",
+                        "useSeverity": true,
+                        "severityValue": "severity_value"
+                    }
+                }
+            ],
+            "instanceConfig": [
+                {
+                    "id": "CIRCLE_GRAPH",
+                    "domain": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": "#FB3640",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "title": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": "#ffffff",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "label": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": "#ffffff",
+                            "margin": 0,
+                            "fontSize": "14px"
+                        }
+                    },
+                    "wtype": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": "#FB3640",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "main_value": {
+                        "textFormat": "{value:.1f}%",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 80",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 50 && {value} < 80",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 50",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": false,
+                            "severityValue": "value",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "display": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 80",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 50 && {value} < 80",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 50",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "value",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "up_left": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "down_left",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "up_center": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "down_center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "up_right": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "up_right",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "down_left": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "down_left",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "down_center": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "down_center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "down_right": {
+                        "textFormat": "{value}",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 3500",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 2500 && {value} < 3500",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 2500",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "up_right",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "value": {
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 80",
+                                    "value": "#247BA0"
+                                },
+                                {
+                                    "condition": "{value} > 80 && {value} < 50",
+                                    "value": "#0A2463"
+                                },
+                                {
+                                    "condition": "{value} <= 50",
+                                    "value": "#FB3640"
+                                }
+                            ],
+                            "defaultColor": "#ffffff",
+                            "useSeverity": true,
+                            "severityValue": "value"
+                        }
+                    }
+                },
+                {
+                    "id": "COLUMN_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 100",
+                                "value": "#247BA0"
+                            },
+                            {
+                                "condition": "{value} > 50 && {value} < 100",
+                                "value": "#0A2463"
+                            },
+                            {
+                                "condition": "{value} <= 50",
+                                "value": "#FB3640"
+                            }
+                        ],
+                        "defaultColor": "#FB3640",
+                        "useSeverity": true
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{point.y}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                },
+                {
+                    "id": "BARS_GRAPH",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 92",
+                                "value": "#247BA0"
+                            },
+                            {
+                                "condition": "{value} > 90 && {value} < 92",
+                                "value": "#0A2463"
+                            },
+                            {
+                                "condition": "{value} <= 90",
+                                "value": "#FB3640"
+                            }
+                        ],
+                        "defaultColor": "#FB3640",
+                        "useSeverity": true,
+                        "severityValue": "severity_value"
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{point.y}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                },
+                {
+                    "id": "MAP_GRAPH",
+                    "map_country": "MEXICO",
+                    "map_type": "REGIONS",
+                    "map_provider": "AT&T",
+                    "style": {
+                        "color": [
+                            {
+                                "condition": "{value} >= 100",
+                                "value": "#247BA0"
+                            },
+                            {
+                                "condition": "{value} > 50 && {value} < 100",
+                                "value": "#0A2463"
+                            },
+                            {
+                                "condition": "{value} <= 50",
+                                "value": "#FB3640"
+                            }
+                        ],
+                        "defaultColor": "#FB3640",
+                        "useSeverity": true
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{region}<br />3G Composite Quality<br />{point.y}<br>",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 10,
+                "row": 0,
+                "columnSpan": 2,
+                "rowSpan": 4,
+                "interaction": false,
+                "resize": false,
+                "drag": true
+            }
+        },
+        {
+            "id": "BUBLE_GRAPH_1",
+            "widget": "BUBLE_GRAPH",
+            "title": "Mercados rentables",
+            "sourceData": "PROFITABLE_MARKETS_BYREGIONS01",
+            "zIndex": 0,
+            "itemsConfig": [
+                {
+                    "id": "K#PROFITABLE_MARKETS||REGION_0",
+                    "fillColor": "#e47490",
+                    "fillOpacity": "1"
+                },
+                {
+                    "id": "K#PROFITABLE_MARKETS||REGION_1",
+                    "fillColor": "#587f51",
+                    "fillOpacity": "1"
+                },
+                {
+                    "id": "K#PROFITABLE_MARKETS||REGION_2",
+                    "fillColor": "#40163c",
+                    "fillOpacity": "1"
+                }
+            ],
+            "instanceConfig": [
+                {
+                    "id": "K#PROFITABLE_MARKETS||REGION_0",
+                    "minSize": "20%",
+                    "maxSize": "100%",
+                    "zMax": 4000,
+                    "zMin": 0,
+                    "gravitationalConstant": 0.05,
+                    "drillDownMode": "external",
+                    "labels": {
+                        "textColor": "#000000",
+                        "fontSize": "12",
+                        "enabled": true,
+                        "format": "{point.name}",
+                        "filter": {
+                            "property": "y",
+                            "operator": ">",
+                            "value": 250
+                        }
+                    },
+                    "title": {
+                        "text": "Mercados rentables",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "valueDecimals": "2",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "<b>{point.name}:</b> {point.value}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "12px",
+                            "color": "#000000"
+                        }
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 2,
+                "row": 4,
+                "columnSpan": 2,
+                "rowSpan": 3,
+                "interaction": false,
+                "resize": true,
+                "drag": true
+            }
+        },
+        {
+            "id": "HEATMAP_GRAPH_1",
+            "widget": "HEATMAP_GRAPH",
+            "title": "Estimación de ingresos",
+            "sourceData": "ESTIMATED_INCOME",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "colorConfig": {
+                        "stops": [
+                            [
+                                0.99,
+                                "#a7090f"
+                            ],
+                            [
+                                1,
+                                "#0fa709"
+                            ]
+                        ],
+                        "minColor": "#a7090f",
+                        "maxColor": "#0fa709",
+                        "minValue": "0",
+                        "maxValue": "1"
+                    },
+                    "label": {
+                        "color": "#000000",
+                        "fontSize": "10",
+                        "enabled": true
+                    },
+                    "title": {
+                        "text": "Estimación de ingresos",
+                        "style": {
+                            "color": "#ffffff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "14px"
+                        }
+                    },
+                    "legend": {
+                        "enabled": false,
+                        "align": "right",
+                        "layout": "vertical",
+                        "margin": 0
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 4,
+                "row": 4,
+                "columnSpan": 2,
+                "rowSpan": 3,
+                "interaction": false,
+                "resize": true,
+                "drag": true
+            }
+        },
+        {
+            "id": "BUBLE_GRAPH_2",
+            "widget": "BUBLE_GRAPH",
+            "title": "Mercados con mas gasto por region",
+            "sourceData": "PROFITABLE_MARKETS_BYREGIONS",
+            "zIndex": 0,
+            "itemsConfig": [
+                {
+                    "id": "K#PROFITABLE_MARKETS||REGION_0",
+                    "fillColor": "#e47490",
+                    "fillOpacity": "1"
+                },
+                {
+                    "id": "K#PROFITABLE_MARKETS||REGION_1",
+                    "fillColor": "#587f51",
+                    "fillOpacity": "1"
+                },
+                {
+                    "id": "K#PROFITABLE_MARKETS||REGION_2",
+                    "fillColor": "#40163c",
+                    "fillOpacity": "1"
+                }
+            ],
+            "instanceConfig": [
+                {
+                    "id": "K#PROFITABLE_MARKETS||REGION_0",
+                    "minSize": "20%",
+                    "maxSize": "100%",
+                    "zMax": 4000,
+                    "zMin": 0,
+                    "gravitationalConstant": 0.05,
+                    "drillDownMode": "external",
+                    "labels": {
+                        "textColor": "#000000",
+                        "fontSize": "12",
+                        "enabled": true,
+                        "format": "{point.name}",
+                        "filter": {
+                            "property": "y",
+                            "operator": ">",
+                            "value": 250
+                        }
+                    },
+                    "title": {
+                        "text": "Mercados rentables",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "valueDecimals": "2",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "<b>{point.name}:</b> {point.value}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "12px",
+                            "color": "#000000"
+                        }
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 6,
+                "row": 4,
+                "columnSpan": 2,
+                "rowSpan": 3,
+                "interaction": true,
+                "resize": true,
+                "drag": true
+            }
+        },
+        {
+            "id": "GIS_MAP_1",
+            "widget": "GIS_MAP",
+            "title": "Rentabilidad por mercado",
+            "sourceData": "RENTABILITY_BY_MARKET",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "imageType": "assets",
+                    "source": "gis_static_monetize.png",
+                    "minWidth": "200"
+                }
+            ],
+            "dashboardConfig": {
+                "column": 8,
+                "row": 4,
+                "columnSpan": 2,
+                "rowSpan": 3,
+                "interaction": true,
+                "resize": true,
+                "drag": true
+            }
+        },
+        {
+            "id": "SYNC_CHART_2",
+            "widget": "SYNC_CHART",
+            "title": "Ingresos Top 50 Mercados",
+            "sourceData": "TOP_50_MARKETS",
+            "zIndex": 0,
+            "itemsConfig": [],
+            "instanceConfig": [
+                {
+                    "id": "K#TOP50_INCOMES",
+                    "type": "column",
+                    "legend": {
+                        "enabled": false
+                    },
+                    "xAxisFormat": "- {value}",
+                    "yAxisTitle": "",
+                    "title": {
+                        "text": "Ingresos TOP 50 Mercados (MXN)",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 0,
+                            "fontSize": "16px"
+                        }
+                    },
+                    "description": {
+                        "text": "{marketsPerc} de mercados -> {incomesPerc} ingresos",
+                        "style": {
+                            "color": "#fff",
+                            "align": "center",
+                            "margin": 5,
+                            "fontSize": "14px"
+                        }
+                    },
+                    "tooltip": {
+                        "isHtmlFormat": "false",
+                        "valueDecimals": "2",
+                        "borderWidth": 1,
+                        "backgroundColor": "none",
+                        "pointFormat": "{point.y}",
+                        "headerFormat": "",
+                        "footerFormat": "",
+                        "shadow": true,
+                        "style": {
+                            "fontSize": "18px",
+                            "color": "#fff"
+                        }
+                    }
+                }
+            ],
+            "dashboardConfig": {
+                "column": 10,
+                "row": 4,
+                "columnSpan": 2,
+                "rowSpan": 3,
+                "interaction": false,
+                "resize": true,
+                "drag": true
+            }
+        }
+    ]
+}

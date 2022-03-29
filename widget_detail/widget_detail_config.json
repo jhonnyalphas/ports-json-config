@@ -1,0 +1,746 @@
+{
+    "id": 101,
+    "name": "Widgets",
+    "type": "dashboard",
+    "platform": "web",
+    "content": {
+        "title": "Widgets",
+        "columnDefinitions": "12,10,6,4,2",
+        "rowDefinitions": 3,
+        "rowHeight": "300",
+        "columnWidth": "*",
+        "sidebar": false,
+        "items": [
+            {
+                "id": 1,
+                "widget": "SPEED_GAUGE",
+                "title": "Current Wind Speed",
+                "sourceData": "WIND_SPEED_SENSOR_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "orientation": "vertical",
+                        "items": [
+                            {
+                                "unit": "km/h",
+                                "value": "wind_speed"
+                            },
+                            {
+                                "title": "Max. Wind Gust",
+                                "unit": "km/h",
+                                "value": "max_wind_speed"
+                            }
+                        ],
+                        "style": {
+                            "defaultColor": "#009bbb",
+                            "useSeverity": false,
+                            "severityValue": "wind_speed"
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 4,
+                    "rowSpan": 1,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "widget": "RADAR_CHART",
+                "title": "Current Wind Direction",
+                "sourceData": "WIND_SENSOR_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "orientation": "vertical",
+                        "items": [
+                            {
+                                "title": "Wind Position",
+                                "unit": "",
+                                "value": "wind_position"
+                            },
+                            {
+                                "title": "Max. Wind Gust Dir.",
+                                "unit": "",
+                                "value": "max_wind_gust_dir"
+                            }
+                        ],
+                        "style": {
+                            "defaultColor": "#009bbb",
+                            "useSeverity": false
+                        },
+                        "legend": true,
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "12px",
+                                "color": "#fff"
+                            }
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 4,
+                    "row": 0,
+                    "columnSpan": 4,
+                    "rowSpan": 1,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "widget": "RADAR_CHART",
+                "title": "Accumulates Wind Direction",
+                "sourceData": "WIND_SENSOR_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "orientation": "horizontal",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} >= 0 && {value} <= 3",
+                                    "value": "#009bbb"
+                                },
+                                {
+                                    "condition": "{value} > 3 && {value} <= 6",
+                                    "value": "#ea6d13"
+                                },
+                                {
+                                    "condition": "{value} > 6 && {value} <= 10",
+                                    "value": "#4c44a6"
+                                },
+                                {
+                                    "condition": "{value} > 10 && {value} <= 13",
+                                    "value": "#fcd401"
+                                },
+                                {
+                                    "condition": "{value} > 13 && {value} <= 16",
+                                    "value": "#ca2c36"
+                                },
+                                {
+                                    "condition": "{value} > 32",
+                                    "value": "#b66bb8"
+                                }
+                            ],
+                            "defaultColor": "#009bbb",
+                            "useSeverity": true,
+                            "severityValue": "wind_speed"
+                        },
+                        "legend": true,
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "12px",
+                                "color": "#fff"
+                            }
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 8,
+                    "row": 0,
+                    "columnSpan": 4,
+                    "rowSpan": 1,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "widget": "ACTIVITY_GAUGE",
+                "title": "Solar and UV Radiation",
+                "sourceData": "SOLAR_RADIATION_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [
+                    {
+                        "id": "K#RADIATION_GAUGE||SOLAR_RADIATION",
+                        "fillColor": "#009bbb",
+                        "showInLegend": true,
+                        "tooltip": {
+                            "prefix": "",
+                            "suffix": "W/m2"
+                        }
+                    }
+                ],
+                "instanceConfig": [
+                    {
+                        "id": "K#RADIATION_GAUGE",
+                        "legend": {
+                            "enabled": true
+                        },
+                        "orientation": "vertical",
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} < 3",
+                                    "value": "#adff2f"
+                                },
+                                {
+                                    "condition": "{value} >= 3 && {value} < 6",
+                                    "value": "#fefe33"
+                                },
+                                {
+                                    "condition": "{value} >= 6 && {value} < 8",
+                                    "value": "##ff8c00"
+                                },
+                                {
+                                    "condition": "{value} >= 9 && {value} < 11",
+                                    "value": "#dc143c"
+                                },
+                                {
+                                    "condition": "{value} >= 11",
+                                    "value": "#9370db"
+                                }
+                            ],
+                            "defaultColor": "#009bbb",
+                            "useSeverity": true,
+                            "severityValue": "uv_level"
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 4,
+                    "rowSpan": 1,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "widget": "TEMPERATURE_SENSOR",
+                "title": "Temperature",
+                "sourceData": "TEMPERATURE_SENSOR_DATA_SOURCE",
+                "zIndex": 0,
+                "itemsConfig": [
+                    {
+                        "id": "K#TEMPERATURE_COLUMN||TEMPERATURE",
+                        "showInLegend": true,
+                        "tooltip": {
+                            "prefix": "",
+                            "suffix": "C"
+                        }
+                    },
+                    {
+                        "id": "K#HUMIDITY_COLUMN||HUMIDITY",
+                        "showInLegend": true,
+                        "tooltip": {
+                            "prefix": "",
+                            "suffix": "%"
+                        }
+                    }
+                ],
+                "instanceConfig": [
+                    {
+                        "id": "K#TEMPERATURE_GAUGE",
+                        "orientation": "vertical"
+                    },
+                    {
+                        "id": "K#HUMIDITY_GAUGE",
+                        "orientation": "vertical",
+                        "style": {
+                            "deafultColor": "#888FA830",
+                            "useSeverity": false
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 4,
+                    "rowSpan": 1,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
+                }
+            },
+            {
+                "widget": "SYNC_CHART",
+                "title": "Mareógrafo (Bocana)",
+                "sourceData": "WAVE_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "type": "column",
+                        "legend": {
+                            "enabled": true
+                        },
+                        "xAxisFormat": "{value:%HH-%mm}",
+                        "yAxisTitle": "",
+                        "title": {
+                            "text": "Mareógrafo (Bocana)",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "description": {
+                            "text": "",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} <= 5",
+                                    "value": "#DBDFEE"
+                                },
+                                {
+                                    "condition": "{value} > 5 && {value} <= 10",
+                                    "value": "#E0BD07"
+                                },
+                                {
+                                    "condition": "{value} > 10 && {value} <= 15",
+                                    "value": "#EA6D13"
+                                },
+                                {
+                                    "condition": "{value} > 15",
+                                    "value": "#CA2C36"
+                                }
+                            ],
+                            "defaultColor": "#DBDFEE",
+                            "useSeverity": true,
+                            "severityValue": "wave_level"
+                        },
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "18px",
+                                "color": "#fff"
+                            }
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 6,
+                    "rowSpan": 3,
+                    "interaction": false
+                }
+            },
+            {
+                "id": 7,
+                "widget": "WIND_DETAIL_CHART",
+                "title": "Estación de Viento (Faro)",
+                "sourceData": "WIND_STATION_DETAIL_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [
+                    [
+                        {
+                            "id": "K#WIND_SENSOR_DATA||WIND_BARB",
+                            "type": "windbarb",
+                            "name": "Viento",
+                            "fillColor": "#ABB0BF",
+                            "fillOpacity": 1.0,
+                            "showInLegend": false,
+                            "tooltip": {
+                                "suffix": " m/s",
+                                "prefix": ""
+                            }
+                        },
+                        {
+                            "id": "K#WIND_SENSOR_DATA||CURRENT_WIND_SPEED",
+                            "type": "line",
+                            "name": "Velocidad Normal",
+                            "fillColor": "#009BBB",
+                            "fillOpacity": 1.0,
+                            "showInLegend": true,
+                            "tooltip": {
+                                "suffix": " Km/h",
+                                "prefix": ""
+                            }
+                        },
+                        {
+                            "id": "K#WIND_SENSOR_DATA||MAX_WIND_SPEED",
+                            "type": "arearange",
+                            "name": "Velocidad Máxima",
+                            "fillColor": "#009BBB",
+                            "fillOpacity": 0.5,
+                            "showInLegend": true,
+                            "tooltip": {
+                                "suffix": " Km/h",
+                                "prefix": ""
+                            }
+                        },
+                        {
+                            "id": "K#WIND_SENSOR_DATA||WIND_OBSERVATION",
+                            "type": "areaspline",
+                            "fillColor": "#E0BD07",
+                            "fillOpacity": 0.5,
+                            "showInLegend": false,
+                            "tooltip": {
+                                "suffix": " Km/h",
+                                "prefix": ""
+                            }
+                        },
+                        {
+                            "id": "K#WIND_SENSOR_DATA||WIND_PREDICTION",
+                            "type": "areaspline",
+                            "fillColor": "#CA2C36",
+                            "fillOpacity": 0.5,
+                            "showInLegend": false,
+                            "tooltip": {
+                                "suffix": " Km/h",
+                                "prefix": ""
+                            }
+                        }
+                    ]
+                ],
+                "instanceConfig": [
+                    {
+                        "id": "K#WIND_SENSOR_DATA",
+                        "type": "windbarb",
+                        "legend": {
+                            "enabled": true
+                        },
+                        "xAxisFormat": "",
+                        "yAxisTitle": "",
+                        "title": {
+                            "type": "text",
+                            "text": "Estación de Viento (Faro)",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "description": {
+                            "type": "text",
+                            "text": "",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "18px"
+                            }
+                        },
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "12px",
+                                "color": "#fff"
+                            }
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 3,
+                    "rowSpan": 2,
+                    "interaction": false
+                }
+            },
+            {
+                "id": 8,
+                "widget": "SYNC_CHART",
+                "title": "Mareógrafo (Bocana)",
+                "sourceData": "WAVE_DATA_SENSOR_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "type": "column",
+                        "legend": {
+                            "enabled": true
+                        },
+                        "xAxisFormat": "{value:%HH-%mm}",
+                        "yAxisTitle": "",
+                        "title": {
+                            "text": "Mareógrafo (Bocana)",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "description": {
+                            "text": "",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} <= 5",
+                                    "value": "#DBDFEE"
+                                },
+                                {
+                                    "condition": "{value} > 5 && {value} <= 10",
+                                    "value": "#E0BD07"
+                                },
+                                {
+                                    "condition": "{value} > 10 && {value} <= 15",
+                                    "value": "#EA6D13"
+                                },
+                                {
+                                    "condition": "{value} > 15",
+                                    "value": "#CA2C36"
+                                }
+                            ],
+                            "defaultColor": "#DBDFEE",
+                            "useSeverity": true,
+                            "severityValue": "wave_level"
+                        },
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "18px",
+                                "color": "#fff"
+                            }
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 6,
+                    "rowSpan": 3,
+                    "interaction": false
+                }
+            },
+            {
+                "id": 9,
+                "widget": "SYNC_CHART",
+                "title": "Actual Mareógrafo (Bocana)",
+                "sourceData": "WAVE_DATA_SOURCE",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [
+                    {
+                        "type": "column",
+                        "legend": {
+                            "enabled": true
+                        },
+                        "xAxisFormat": "{value:%HH-%mm}",
+                        "yAxisTitle": "",
+                        "title": {
+                            "text": "Mareógrafo Actual (Bocana)",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "description": {
+                            "text": "",
+                            "style": {
+                                "color": "#fff",
+                                "align": "center",
+                                "margin": "0",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "style": {
+                            "color": [
+                                {
+                                    "condition": "{value} <= 5",
+                                    "value": "#DBDFEE"
+                                },
+                                {
+                                    "condition": "{value} > 5 && {value} <= 10",
+                                    "value": "#E0BD07"
+                                },
+                                {
+                                    "condition": "{value} > 10 && {value} <= 15",
+                                    "value": "#EA6D13"
+                                },
+                                {
+                                    "condition": "{value} > 15",
+                                    "value": "#CA2C36"
+                                }
+                            ],
+                            "defaultColor": "#DBDFEE",
+                            "useSeverity": true,
+                            "severityValue": "wave_level"
+                        },
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "18px",
+                                "color": "#fff"
+                            }
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 6,
+                    "row": 0,
+                    "columnSpan": 6,
+                    "rowSpan": 3,
+                    "interaction": false
+                }
+            },
+            {
+                "id": 10,
+                "widget": "RAINFALL_SENSOR",
+                "title": "Rainfall",
+                "sourceData": "ACCUMULATE_RAINFALL_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [
+                    {
+                        "id": "K#RAINFALL_COLUMN||ACCUMULATE_RAINFALL",
+                        "showInLegend": true,
+                        "tooltip": {
+                            "prefix": "",
+                            "suffix": "/m2"
+                        }
+                    },
+                    {
+                        "id": "K#HUMIDITY_COLUMN||HUMIDITY",
+                        "showInLegend": true,
+                        "tooltip": {
+                            "prefix": "",
+                            "suffix": "%"
+                        }
+                    }
+                ],
+                "instanceConfig": [
+                    {
+                        "id": "K#RAINFALL_COLUMN",
+                        "orientation": "vertical",
+                        "style": {
+                            "defaultColor": "#009BBB",
+                            "useSeverity": false
+                        }
+                    }
+                ],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 4,
+                    "rowSpan": 1,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
+                }
+            },
+            {
+                "id": 11,
+                "widget": "DATA_TABLE",
+                "title": "DAILY_SUMMARY_DATA",
+                "sourceData": "WIND_STATION_DETAIL_SUMMARY_DATASOURCE",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [],
+                "dashboardConfig": {
+                    "column": 0,
+                    "row": 3,
+                    "columnSpan": 6,
+                    "rowSpan": 1,
+                    "interaction": false
+                }
+            },
+            {
+                "id": 12,
+                "widget": "DATA_TABLE",
+                "title": "DAILY_SUMMARY_DATA",
+                "sourceData": "WIND_STATION_DETAIL_SUMMARY",
+                "zIndex": 0,
+                "itemsConfig": [],
+                "instanceConfig": [],
+                "dashboardConfig": {
+                    "column": 6,
+                    "row": 1,
+                    "columnSpan": 6,
+                    "rowSpan": 1,
+                    "interaction": false
+                }
+            }
+        ]
+    }
+}
