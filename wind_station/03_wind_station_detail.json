@@ -116,10 +116,16 @@
         }
     ],
     "dashboardConfig": {
-        "column": 1,
-        "row": 0,
-        "columnSpan": 3,
-        "rowSpan": 2,
-        "interaction": false
+        "column": 0,
+        "row": 10,
+        "columnSpan": 12,
+        "rowSpan": 10,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
     }
 }

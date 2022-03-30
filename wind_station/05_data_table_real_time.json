@@ -11,10 +11,16 @@
     "itemsConfig": [],
     "instanceConfig": [],
     "dashboardConfig": {
-        "column": 1,
-        "row": 0,
-        "columnSpan": 3,
-        "rowSpan": 2,
-        "interaction": false
+        "column": 6,
+        "row": 20,
+        "columnSpan": 6,
+        "rowSpan": 10,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
     }
 }

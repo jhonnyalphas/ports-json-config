@@ -49,7 +49,7 @@
         "column": 4,
         "row": 0,
         "columnSpan": 4,
-        "rowSpan": 1,
+        "rowSpan": 10,
         "interaction": false,
         "resize": false,
         "drag": false,
