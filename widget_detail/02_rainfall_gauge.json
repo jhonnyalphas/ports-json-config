@@ -4,6 +4,10 @@
     "title": "Rainfall",
     "sourceData": "ACCUMULATE_RAINFALL_DATA",
     "zIndex": 0,
+    "datetime": {
+        "start": "",
+        "end": ""
+    },
     "itemsConfig": [
         {
             "id": "K#RAINFALL_COLUMN||ACCUMULATE_RAINFALL",

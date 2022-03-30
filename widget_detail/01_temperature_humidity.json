@@ -4,6 +4,10 @@
     "title": "Temperature",
     "sourceData": "TEMPERATURE_SENSOR_DATA_SOURCE",
     "zIndex": 0,
+    "datetime": {
+        "start": "",
+        "end": ""
+    },
     "itemsConfig": [
         {
             "id": "K#TEMPERATURE_COLUMN||TEMPERATURE",

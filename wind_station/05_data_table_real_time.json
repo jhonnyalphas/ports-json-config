@@ -4,12 +4,12 @@
     "title": "DAILY_SUMMARY_DATA",
     "sourceData": "WIND_STATION_DETAIL_SUMMARY",
     "zIndex": 0,
-    "itemsConfig": [
-        
-    ],
-    "instanceConfig": [
-        
-    ],
+    "datetime": {
+        "start": "",
+        "end": ""
+    },
+    "itemsConfig": [],
+    "instanceConfig": [],
     "dashboardConfig": {
         "column": 1,
         "row": 0,

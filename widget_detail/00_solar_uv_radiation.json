@@ -4,6 +4,10 @@
     "title": "Solar and UV Radiation",
     "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
     "zIndex": 0,
+    "datetime": {
+        "start": "",
+        "end": ""
+    },
     "itemsConfig": [
         {
             "id": "K#RADIATION_GAUGE||SOLAR_RADIATION",

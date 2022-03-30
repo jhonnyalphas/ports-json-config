@@ -4,6 +4,10 @@
     "title": "Current Wind Direction",
     "sourceData": "WIND_SENSOR_DATASOURCE",
     "zIndex": 0,
+    "datetime": {
+        "start": "",
+        "end": ""
+    },
     "itemsConfig": [],
     "instanceConfig": [
         {
