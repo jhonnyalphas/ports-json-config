@@ -7,7 +7,7 @@
         "title": "Mareógrafo (Levante)",
         "columnDefinitions": "12,10,6,4,2",
         "rowDefinitions": 2,
-        "rowHeight": "300",
+        "rowHeight": "30",
         "columnWidth": "*",
         "sidebar": false,
         "items": [

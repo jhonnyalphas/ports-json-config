@@ -7,7 +7,7 @@
         "title": "Estación de Viento Faro",
         "columnDefinitions": "12,10,6,4,2",
         "rowDefinitions": 3,
-        "rowHeight": "300",
+        "rowHeight": "30",
         "columnWidth": "*",
         "sidebar": false,
         "items": [
@@ -15,8 +15,12 @@
                 "id": 1,
                 "widget": "SPEED_GAUGE",
                 "title": "Current Wind Speed",
-                "sourceData": "WIND_STATION_DATASOURCE",
+                "sourceData": "WIND_SPEED_SENSOR_DATASOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-29T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -55,10 +59,14 @@
             },
             {
                 "id": 2,
-                "widget": "RADAR_CHART",
+                "widget": "WIND_ROSE",
                 "title": "Current Wind Direction",
-                "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+                "sourceData": "WIND_SENSOR_DATASOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-15T10:00:00.000Z",
+                    "end": ""
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -77,8 +85,22 @@
                         ],
                         "style": {
                             "defaultColor": "#009bbb",
-                            "useSeverity": true,
-                            "severityValue": "wind_position"
+                            "useSeverity": false
+                        },
+                        "legend": true,
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "12px",
+                                "color": "#fff"
+                            }
                         }
                     }
                 ],
@@ -98,49 +120,18 @@
             },
             {
                 "id": 3,
-                "widget": "RADAR_CHART",
+                "widget": "WIND_ROSE",
                 "title": "Accumulates Wind Direction",
-                "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
+                "sourceData": "WIND_SENSOR_DATASOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-20T10:00:00.000Z",
+                    "end": "2022-03-22T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
-                        "block": "WIND_ROSE",
-                        "title": "Current Wind Direction",
-                        "icon": "",
                         "orientation": "horizontal",
-                        "items": [
-                            {
-                                "title": "0 - 3",
-                                "unit": "km/h",
-                                "value": "wind_speed"
-                            },
-                            {
-                                "title": "3 - 6",
-                                "unit": "km/h",
-                                "value": "wind_speed"
-                            },
-                            {
-                                "title": "6 - 10",
-                                "unit": "km/h",
-                                "value": "wind_speed"
-                            },
-                            {
-                                "title": "10 - 13",
-                                "unit": "km/h",
-                                "value": "wind_speed"
-                            },
-                            {
-                                "title": "13 - 16",
-                                "unit": "km/h",
-                                "value": "wind_speed"
-                            },
-                            {
-                                "title": "32 >",
-                                "unit": "km/h",
-                                "value": "wind_speed"
-                            }
-                        ],
                         "style": {
                             "color": [
                                 {
@@ -171,6 +162,21 @@
                             "defaultColor": "#009bbb",
                             "useSeverity": true,
                             "severityValue": "wind_speed"
+                        },
+                        "legend": true,
+                        "tooltip": {
+                            "isHtmlFormat": "false",
+                            "valueDecimals": "2",
+                            "borderWidth": 1,
+                            "backgroundColor": "none",
+                            "pointFormat": "{point.y}",
+                            "headerFormat": "",
+                            "footerFormat": "",
+                            "shadow": true,
+                            "style": {
+                                "fontSize": "12px",
+                                "color": "#fff"
+                            }
                         }
                     }
                 ],
@@ -194,6 +200,10 @@
                 "title": "Estación de Viento (Faro)",
                 "sourceData": "WIND_STATION_DETAIL",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "",
+                    "end": ""
+                },
                 "itemsConfig": [
                     [
                         {
@@ -259,6 +269,7 @@
                 "instanceConfig": [
                     {
                         "id": "K#WIND_SENSOR_DATA",
+                        "type": "windbarb",
                         "legend": {
                             "enabled": true
                         },
@@ -303,8 +314,8 @@
                 "dashboardConfig": {
                     "column": 1,
                     "row": 0,
-                    "columnSpan": 12,
-                    "rowSpan": 1,
+                    "columnSpan": 3,
+                    "rowSpan": 2,
                     "interaction": false
                 }
             },
@@ -314,13 +325,17 @@
                 "title": "DAILY_SUMMARY_DATA",
                 "sourceData": "WIND_STATION_DETAIL_SUMMARY",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-26T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [],
                 "dashboardConfig": {
-                    "column": 0,
-                    "row": 2,
-                    "columnSpan": 6,
-                    "rowSpan": 1,
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 3,
+                    "rowSpan": 2,
                     "interaction": false
                 }
             },
@@ -330,13 +345,17 @@
                 "title": "DAILY_SUMMARY_DATA",
                 "sourceData": "WIND_STATION_DETAIL_SUMMARY",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-26T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [],
                 "dashboardConfig": {
-                    "column": 6,
-                    "row": 2,
-                    "columnSpan": 6,
-                    "rowSpan": 1,
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 3,
+                    "rowSpan": 2,
                     "interaction": false
                 }
             }

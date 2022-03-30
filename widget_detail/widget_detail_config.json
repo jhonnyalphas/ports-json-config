@@ -7,7 +7,7 @@
         "title": "Widgets",
         "columnDefinitions": "12,10,6,4,2",
         "rowDefinitions": 3,
-        "rowHeight": "300",
+        "rowHeight": "30",
         "columnWidth": "*",
         "sidebar": false,
         "items": [
@@ -55,7 +55,7 @@
             },
             {
                 "id": 2,
-                "widget": "RADAR_CHART",
+                "widget": "WIND_ROSE",
                 "title": "Current Wind Direction",
                 "sourceData": "WIND_SENSOR_DATASOURCE",
                 "zIndex": 0,
@@ -112,7 +112,7 @@
             },
             {
                 "id": 3,
-                "widget": "RADAR_CHART",
+                "widget": "WIND_ROSE",
                 "title": "Accumulates Wind Direction",
                 "sourceData": "WIND_SENSOR_DATASOURCE",
                 "zIndex": 0,

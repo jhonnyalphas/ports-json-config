@@ -1,6 +1,6 @@
 {
     "id": 2,
-    "widget": "RADAR_CHART",
+    "widget": "WIND_ROSE",
     "title": "Current Wind Direction",
     "sourceData": "WIND_SENSOR_DATASOURCE",
     "zIndex": 0,
