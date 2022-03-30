@@ -4,8 +4,8 @@
     "sourceData": "WAVE_DATA",
     "zIndex": 0,
     "datetime": {
-        "start": "",
-        "end": ""
+        "start": "2022-03-28T10:00:00.000Z",
+        "end": "2022-03-30T10:00:00.000Z"
     },
     "itemsConfig": [],
     "instanceConfig": [

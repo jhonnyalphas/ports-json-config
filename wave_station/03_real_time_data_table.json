@@ -5,7 +5,7 @@
     "sourceData": "WIND_STATION_DETAIL_SUMMARY",
     "zIndex": 0,
     "datetime": {
-        "start": "",
+        "start": "2022-03-28T10:00:00.000Z",
         "end": ""
     },
     "itemsConfig": [],
