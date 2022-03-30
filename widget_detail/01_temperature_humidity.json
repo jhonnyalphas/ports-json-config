@@ -1,5 +1,5 @@
 {
-    "id": 5,
+    "id": 12,
     "widget": "TEMPERATURE_SENSOR",
     "title": "Temperature",
     "sourceData": "TEMPERATURE_SENSOR_DATA_SOURCE",

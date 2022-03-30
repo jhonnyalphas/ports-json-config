@@ -1,4 +1,5 @@
 {
+    "id": 7,
     "widget": "SYNC_CHART",
     "title": "Mareógrafo (Bocana)",
     "sourceData": "WAVE_DATA",

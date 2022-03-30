@@ -1,5 +1,5 @@
 {
-    "id": 6,
+    "id": 4,
     "widget": "WIND_DETAIL_CHART",
     "title": "Estación de Viento (Faro)",
     "sourceData": "WIND_STATION_DETAIL",

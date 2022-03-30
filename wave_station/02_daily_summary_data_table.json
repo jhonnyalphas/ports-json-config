@@ -1,5 +1,5 @@
 {
-    "id": 6,
+    "id": 9,
     "widget": "DATA_TABLE",
     "title": "DAILY_SUMMARY_DATA",
     "sourceData": "WIND_STATION_DETAIL_SUMMARY",

@@ -1,5 +1,5 @@
 {
-    "id": 5,
+    "id": 11,
     "widget": "ACTIVITY_GAUGE",
     "title": "Solar and UV Radiation",
     "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",

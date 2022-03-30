@@ -1,5 +1,5 @@
 {
-    "id": 9,
+    "id": 8,
     "widget": "SYNC_CHART",
     "title": "Actual Mareógrafo (Bocana)",
     "sourceData": "WAVE_DATA_SOURCE",
