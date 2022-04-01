@@ -6,8 +6,8 @@
     "content": {
         "title": "Estación de Viento Faro",
         "columnDefinitions": "12,10,6,4,2",
-        "rowDefinitions": 3,
-        "rowHeight": "30",
+        "rowDefinitions": 21,
+        "rowHeight": "35",
         "columnWidth": "*",
         "sidebar": false,
         "items": [
@@ -47,7 +47,7 @@
                     "column": 0,
                     "row": 0,
                     "columnSpan": 4,
-                    "rowSpan": 1,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -108,7 +108,7 @@
                     "column": 4,
                     "row": 0,
                     "columnSpan": 4,
-                    "rowSpan": 1,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -184,7 +184,7 @@
                     "column": 8,
                     "row": 0,
                     "columnSpan": 4,
-                    "rowSpan": 1,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -312,11 +312,17 @@
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 1,
-                    "row": 0,
-                    "columnSpan": 3,
-                    "rowSpan": 2,
-                    "interaction": false
+                    "column": 0,
+                    "row": 10,
+                    "columnSpan": 12,
+                    "rowSpan": 7,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
                 }
             },
             {
@@ -332,11 +338,17 @@
                 "itemsConfig": [],
                 "instanceConfig": [],
                 "dashboardConfig": {
-                    "column": 1,
-                    "row": 0,
-                    "columnSpan": 3,
-                    "rowSpan": 2,
-                    "interaction": false
+                    "column": 0,
+                    "row": 20,
+                    "columnSpan": 6,
+                    "rowSpan": 7,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
                 }
             },
             {
@@ -352,11 +364,17 @@
                 "itemsConfig": [],
                 "instanceConfig": [],
                 "dashboardConfig": {
-                    "column": 1,
-                    "row": 0,
-                    "columnSpan": 3,
-                    "rowSpan": 2,
-                    "interaction": false
+                    "column": 6,
+                    "row": 20,
+                    "columnSpan": 6,
+                    "rowSpan": 7,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
                 }
             }
         ]
