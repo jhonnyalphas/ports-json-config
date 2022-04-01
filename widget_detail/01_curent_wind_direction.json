@@ -1,0 +1,61 @@
+{
+    "id": 2,
+    "widget": "WIND_ROSE",
+    "title": "Current Wind Direction",
+    "sourceData": "WIND_SENSOR_DATASOURCE",
+    "zIndex": 0,
+    "datetime": {
+        "start": "2022-03-15T10:00:00.000Z",
+        "end": ""
+    },
+    "itemsConfig": [],
+    "instanceConfig": [
+        {
+            "orientation": "vertical",
+            "items": [
+                {
+                    "title": "Wind Position",
+                    "unit": "",
+                    "value": "wind_position"
+                },
+                {
+                    "title": "Max. Wind Gust Dir.",
+                    "unit": "",
+                    "value": "max_wind_gust_dir"
+                }
+            ],
+            "style": {
+                "defaultColor": "#009bbb",
+                "useSeverity": false
+            },
+            "legend": true,
+            "tooltip": {
+                "isHtmlFormat": "false",
+                "valueDecimals": "2",
+                "borderWidth": 1,
+                "backgroundColor": "none",
+                "pointFormat": "{point.y}",
+                "headerFormat": "",
+                "footerFormat": "",
+                "shadow": true,
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#fff"
+                }
+            }
+        }
+    ],
+    "dashboardConfig": {
+        "column": 2,
+        "row": 0,
+        "columnSpan": 2,
+        "rowSpan": 7,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
+    }
+}

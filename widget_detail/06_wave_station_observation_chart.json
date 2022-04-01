@@ -1,0 +1,90 @@
+{
+    "id": 7     ,
+    "widget": "SYNC_CHART",
+    "title": "Mareógrafo (Bocana)",
+    "sourceData": "WAVE_DATA",
+    "zIndex": 0,
+    "datetime": {
+        "start": "2022-03-28T10:00:00.000Z",
+        "end": "2022-03-30T10:00:00.000Z"
+    },
+    "itemsConfig": [],
+    "instanceConfig": [
+        {
+            "type": "column",
+            "legend": {
+                "enabled": true
+            },
+            "xAxisFormat": "{value:%HH-%mm}",
+            "yAxisTitle": "",
+            "title": {
+                "text": "Mareógrafo (Bocana)",
+                "style": {
+                    "color": "#fff",
+                    "align": "center",
+                    "margin": "0",
+                    "fontSize": "14px"
+                }
+            },
+            "description": {
+                "text": "",
+                "style": {
+                    "color": "#fff",
+                    "align": "center",
+                    "margin": "0",
+                    "fontSize": "14px"
+                }
+            },
+            "style": {
+                "color": [
+                    {
+                        "condition": "{value} <= 5",
+                        "value": "#DBDFEE"
+                    },
+                    {
+                        "condition": "{value} > 5 && {value} <= 10",
+                        "value": "#E0BD07"
+                    },
+                    {
+                        "condition": "{value} > 10 && {value} <= 15",
+                        "value": "#EA6D13"
+                    },
+                    {
+                        "condition": "{value} > 15",
+                        "value": "#CA2C36"
+                    }
+                ],
+                "defaultColor": "#DBDFEE",
+                "useSeverity": true,
+                "severityValue": "wave_level"
+            },
+            "tooltip": {
+                "isHtmlFormat": "false",
+                "valueDecimals": "2",
+                "borderWidth": 1,
+                "backgroundColor": "none",
+                "pointFormat": "{point.y}",
+                "headerFormat": "",
+                "footerFormat": "",
+                "shadow": true,
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#fff"
+                }
+            }
+        }
+    ],
+    "dashboardConfig": {
+        "column": 3,
+        "row": 7,
+        "columnSpan": 2,
+        "rowSpan": 7,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
+    }
+}

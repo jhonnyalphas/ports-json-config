@@ -1,0 +1,46 @@
+{
+    "id": 1,
+    "widget": "SPEED_GAUGE",
+    "title": "Current Wind Speed",
+    "sourceData": "WIND_SPEED_SENSOR_DATASOURCE",
+    "zIndex": 0,
+    "datetime": {
+        "start": "2022-03-29T10:00:00.000Z",
+        "end": "2022-03-30T10:00:00.000Z"
+    },
+    "itemsConfig": [],
+    "instanceConfig": [
+        {
+            "orientation": "vertical",
+            "items": [
+                {
+                    "unit": "km/h",
+                    "value": "wind_speed"
+                },
+                {
+                    "title": "Max. Wind Gust",
+                    "unit": "km/h",
+                    "value": "max_wind_speed"
+                }
+            ],
+            "style": {
+                "defaultColor": "#009bbb",
+                "useSeverity": false,
+                "severityValue": "wind_speed"
+            }
+        }
+    ],
+    "dashboardConfig": {
+        "column": 0,
+        "row": 0,
+        "columnSpan": 2,
+        "rowSpan": 7,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
+    }
+}
