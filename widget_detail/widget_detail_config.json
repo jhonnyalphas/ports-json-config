@@ -17,6 +17,10 @@
                 "title": "Current Wind Speed",
                 "sourceData": "WIND_SPEED_SENSOR_DATASOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-29T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -42,8 +46,8 @@
                 "dashboardConfig": {
                     "column": 0,
                     "row": 0,
-                    "columnSpan": 4,
-                    "rowSpan": 1,
+                    "columnSpan": 2,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -59,6 +63,10 @@
                 "title": "Current Wind Direction",
                 "sourceData": "WIND_SENSOR_DATASOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-15T10:00:00.000Z",
+                    "end": ""
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -97,10 +105,10 @@
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 4,
+                    "column": 2,
                     "row": 0,
-                    "columnSpan": 4,
-                    "rowSpan": 1,
+                    "columnSpan": 2,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -116,6 +124,10 @@
                 "title": "Accumulates Wind Direction",
                 "sourceData": "WIND_SENSOR_DATASOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-20T10:00:00.000Z",
+                    "end": "2022-03-22T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -169,10 +181,10 @@
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 8,
+                    "column": 4,
                     "row": 0,
-                    "columnSpan": 4,
-                    "rowSpan": 1,
+                    "columnSpan": 2,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -186,8 +198,12 @@
                 "id": 4,
                 "widget": "ACTIVITY_GAUGE",
                 "title": "Solar and UV Radiation",
-                "sourceData": "SOLAR_RADIATION_DATASOURCE",
+                "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-28T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [
                     {
                         "id": "K#RADIATION_GAUGE||SOLAR_RADIATION",
@@ -236,10 +252,10 @@
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 0,
+                    "column": 3,
                     "row": 0,
-                    "columnSpan": 4,
-                    "rowSpan": 1,
+                    "columnSpan": 2,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -255,6 +271,10 @@
                 "title": "Temperature",
                 "sourceData": "TEMPERATURE_SENSOR_DATA_SOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "",
+                    "end": ""
+                },
                 "itemsConfig": [
                     {
                         "id": "K#TEMPERATURE_COLUMN||TEMPERATURE",
@@ -288,10 +308,10 @@
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 0,
+                    "column": 4,
                     "row": 0,
-                    "columnSpan": 4,
-                    "rowSpan": 1,
+                    "columnSpan": 2,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -302,90 +322,15 @@
                 }
             },
             {
-                "widget": "SYNC_CHART",
-                "title": "Mareógrafo (Bocana)",
-                "sourceData": "WAVE_DATASOURCE",
-                "zIndex": 0,
-                "itemsConfig": [],
-                "instanceConfig": [
-                    {
-                        "type": "column",
-                        "legend": {
-                            "enabled": true
-                        },
-                        "xAxisFormat": "{value:%HH-%mm}",
-                        "yAxisTitle": "",
-                        "title": {
-                            "text": "Mareógrafo (Bocana)",
-                            "style": {
-                                "color": "#fff",
-                                "align": "center",
-                                "margin": "0",
-                                "fontSize": "14px"
-                            }
-                        },
-                        "description": {
-                            "text": "",
-                            "style": {
-                                "color": "#fff",
-                                "align": "center",
-                                "margin": "0",
-                                "fontSize": "14px"
-                            }
-                        },
-                        "style": {
-                            "color": [
-                                {
-                                    "condition": "{value} <= 5",
-                                    "value": "#DBDFEE"
-                                },
-                                {
-                                    "condition": "{value} > 5 && {value} <= 10",
-                                    "value": "#E0BD07"
-                                },
-                                {
-                                    "condition": "{value} > 10 && {value} <= 15",
-                                    "value": "#EA6D13"
-                                },
-                                {
-                                    "condition": "{value} > 15",
-                                    "value": "#CA2C36"
-                                }
-                            ],
-                            "defaultColor": "#DBDFEE",
-                            "useSeverity": true,
-                            "severityValue": "wave_level"
-                        },
-                        "tooltip": {
-                            "isHtmlFormat": "false",
-                            "valueDecimals": "2",
-                            "borderWidth": 1,
-                            "backgroundColor": "none",
-                            "pointFormat": "{point.y}",
-                            "headerFormat": "",
-                            "footerFormat": "",
-                            "shadow": true,
-                            "style": {
-                                "fontSize": "18px",
-                                "color": "#fff"
-                            }
-                        }
-                    }
-                ],
-                "dashboardConfig": {
-                    "column": 0,
-                    "row": 0,
-                    "columnSpan": 6,
-                    "rowSpan": 3,
-                    "interaction": false
-                }
-            },
-            {
-                "id": 7,
+                "id": 6,
                 "widget": "WIND_DETAIL_CHART",
                 "title": "Estación de Viento (Faro)",
-                "sourceData": "WIND_STATION_DETAIL_DATASOURCE",
+                "sourceData": "WIND_STATION_DETAIL",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "",
+                    "end": ""
+                },
                 "itemsConfig": [
                     [
                         {
@@ -494,19 +439,29 @@
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 1,
-                    "row": 0,
-                    "columnSpan": 3,
-                    "rowSpan": 2,
-                    "interaction": false
+                    "column": 0,
+                    "row": 7,
+                    "columnSpan": 4,
+                    "rowSpan": 7,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
                 }
             },
             {
-                "id": 8,
+                "id": 7,
                 "widget": "SYNC_CHART",
                 "title": "Mareógrafo (Bocana)",
-                "sourceData": "WAVE_DATA_SENSOR_DATASOURCE",
+                "sourceData": "WAVE_DATA",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-28T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -574,19 +529,29 @@
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 0,
-                    "row": 0,
-                    "columnSpan": 6,
-                    "rowSpan": 3,
-                    "interaction": false
+                    "column": 4,
+                    "row": 7,
+                    "columnSpan": 2,
+                    "rowSpan": 7,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
                 }
             },
             {
-                "id": 9,
+                "id": 8,
                 "widget": "SYNC_CHART",
                 "title": "Actual Mareógrafo (Bocana)",
                 "sourceData": "WAVE_DATA_SOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-28T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -654,19 +619,29 @@
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 6,
-                    "row": 0,
-                    "columnSpan": 6,
-                    "rowSpan": 3,
-                    "interaction": false
+                    "column": 8,
+                    "row": 7,
+                    "columnSpan": 2,
+                    "rowSpan": 7,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
                 }
             },
             {
-                "id": 10,
-                "widget": "RAINFALL_SENSOR",
+                "id": 9,
+                "widget": "RANFALL_SENSOR",
                 "title": "Rainfall",
-                "sourceData": "ACCUMULATE_RAINFALL_DATASOURCE",
+                "sourceData": "ACCUMULATE_RAINFALL_DATA",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "",
+                    "end": ""
+                },
                 "itemsConfig": [
                     {
                         "id": "K#RAINFALL_COLUMN||ACCUMULATE_RAINFALL",
@@ -696,10 +671,36 @@
                     }
                 ],
                 "dashboardConfig": {
+                    "column": 10,
+                    "row": 7,
+                    "columnSpan": 2,
+                    "rowSpan": 7,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
+                }
+            },
+            {
+                "id": 10,
+                "widget": "DATA_TABLE",
+                "title": "DAILY_SUMMARY_DATA",
+                "sourceData": "WIND_STATION_DETAIL_SUMMARY",
+                "zIndex": 0,
+                "datetime": {
+                    "start": "",
+                    "end": ""
+                },
+                "itemsConfig": [],
+                "instanceConfig": [],
+                "dashboardConfig": {
                     "column": 0,
-                    "row": 0,
-                    "columnSpan": 4,
-                    "rowSpan": 1,
+                    "row": 14,
+                    "columnSpan": 6,
+                    "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
                     "drag": false,
@@ -713,32 +714,26 @@
                 "id": 11,
                 "widget": "DATA_TABLE",
                 "title": "DAILY_SUMMARY_DATA",
-                "sourceData": "WIND_STATION_DETAIL_SUMMARY_DATASOURCE",
-                "zIndex": 0,
-                "itemsConfig": [],
-                "instanceConfig": [],
-                "dashboardConfig": {
-                    "column": 0,
-                    "row": 3,
-                    "columnSpan": 6,
-                    "rowSpan": 1,
-                    "interaction": false
-                }
-            },
-            {
-                "id": 12,
-                "widget": "DATA_TABLE",
-                "title": "DAILY_SUMMARY_DATA",
                 "sourceData": "WIND_STATION_DETAIL_SUMMARY",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-28T10:00:00.000Z",
+                    "end": ""
+                },
                 "itemsConfig": [],
                 "instanceConfig": [],
                 "dashboardConfig": {
-                    "column": 6,
-                    "row": 1,
+                    "column": 7,
+                    "row": 14,
                     "columnSpan": 6,
-                    "rowSpan": 1,
-                    "interaction": false
+                    "rowSpan": 7,
+                    "interaction": false,
+                    "resize": false,
+                    "drag": false,
+                    "style": {
+                        "borderWidget": "",
+                        "backgroundHeader": ""
+                    }
                 }
             }
         ]
