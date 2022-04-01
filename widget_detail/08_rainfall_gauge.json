@@ -37,8 +37,8 @@
         }
     ],
     "dashboardConfig": {
-        "column": 3,
-        "row": 8,
+        "column": 10,
+        "row": 7,
         "columnSpan": 2,
         "rowSpan": 7,
         "interaction": false,

@@ -75,7 +75,7 @@
         }
     ],
     "dashboardConfig": {
-        "column": 3,
+        "column": 4,
         "row": 7,
         "columnSpan": 2,
         "rowSpan": 7,

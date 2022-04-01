@@ -1,0 +1,26 @@
+{
+    "id": 9,
+    "widget": "DATA_TABLE",
+    "title": "DAILY_SUMMARY_DATA",
+    "sourceData": "WIND_STATION_DETAIL_SUMMARY",
+    "zIndex": 0,
+    "datetime": {
+        "start": "",
+        "end": ""
+    },
+    "itemsConfig": [],
+    "instanceConfig": [],
+    "dashboardConfig": {
+        "column": 0,
+        "row": 14,
+        "columnSpan": 6,
+        "rowSpan": 7,
+        "interaction": false,
+        "resize": false,
+        "drag": false,
+        "style": {
+            "borderWidget": "",
+            "backgroundHeader": ""
+        }
+    }
+}
