@@ -1,5 +1,5 @@
 {
-    "id": 7,
+    "id": 7     ,
     "widget": "SYNC_CHART",
     "title": "Mareógrafo (Bocana)",
     "sourceData": "WAVE_DATA",
@@ -78,7 +78,7 @@
         "column": 0,
         "row": 0,
         "columnSpan": 6,
-        "rowSpan": 3,
+        "rowSpan": 15,
         "interaction": false
     }
 }

@@ -12,11 +12,15 @@
         "sidebar": false,
         "items": [
             {
-                "id": 1,
+                "id": 7     ,
                 "widget": "SYNC_CHART",
                 "title": "Mareógrafo (Bocana)",
                 "sourceData": "WAVE_DATA",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-28T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -87,16 +91,20 @@
                     "column": 0,
                     "row": 0,
                     "columnSpan": 6,
-                    "rowSpan": 3,
+                    "rowSpan": 15,
                     "interaction": false
                 }
             },
             {
-                "id": 2,
+                "id": 8,
                 "widget": "SYNC_CHART",
                 "title": "Actual Mareógrafo (Bocana)",
-                "sourceData": "WAVE_DATA",
+                "sourceData": "WAVE_DATA_SOURCE",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-28T10:00:00.000Z",
+                    "end": "2022-03-30T10:00:00.000Z"
+                },
                 "itemsConfig": [],
                 "instanceConfig": [
                     {
@@ -167,39 +175,47 @@
                     "column": 6,
                     "row": 0,
                     "columnSpan": 6,
-                    "rowSpan": 3,
+                    "rowSpan": 15,
                     "interaction": false
                 }
             },
             {
-                "id": 3,
+                "id": 9,
                 "widget": "DATA_TABLE",
                 "title": "DAILY_SUMMARY_DATA",
                 "sourceData": "WIND_STATION_DETAIL_SUMMARY",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "",
+                    "end": ""
+                },
                 "itemsConfig": [],
                 "instanceConfig": [],
                 "dashboardConfig": {
                     "column": 0,
-                    "row": 3,
+                    "row": 15,
                     "columnSpan": 6,
-                    "rowSpan": 1,
+                    "rowSpan": 7,
                     "interaction": false
                 }
             },
             {
-                "id": 4,
+                "id": 10,
                 "widget": "DATA_TABLE",
                 "title": "DAILY_SUMMARY_DATA",
                 "sourceData": "WIND_STATION_DETAIL_SUMMARY",
                 "zIndex": 0,
+                "datetime": {
+                    "start": "2022-03-28T10:00:00.000Z",
+                    "end": ""
+                },
                 "itemsConfig": [],
                 "instanceConfig": [],
                 "dashboardConfig": {
                     "column": 6,
-                    "row": 1,
+                    "row": 15,
                     "columnSpan": 6,
-                    "rowSpan": 1,
+                    "rowSpan": 7,
                     "interaction": false
                 }
             }

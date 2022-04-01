@@ -12,9 +12,9 @@
     "instanceConfig": [],
     "dashboardConfig": {
         "column": 0,
-        "row": 3,
+        "row": 15,
         "columnSpan": 6,
-        "rowSpan": 1,
+        "rowSpan": 7,
         "interaction": false
     }
 }
