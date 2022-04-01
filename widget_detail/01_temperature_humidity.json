@@ -41,10 +41,10 @@
         }
     ],
     "dashboardConfig": {
-        "column": 0,
+        "column": 4,
         "row": 0,
-        "columnSpan": 4,
-        "rowSpan": 1,
+        "columnSpan": 2,
+        "rowSpan": 7,
         "interaction": false,
         "resize": false,
         "drag": false,
