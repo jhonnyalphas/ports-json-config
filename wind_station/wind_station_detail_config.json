@@ -86,18 +86,6 @@
                 "instanceConfig": [
                     {
                         "orientation": "vertical",
-                        "items": [
-                            {
-                                "title": "Wind Position",
-                                "unit": "",
-                                "value": "wind_position"
-                            },
-                            {
-                                "title": "Max. Wind Gust Dir.",
-                                "unit": "",
-                                "value": "max_wind_gust_dir"
-                            }
-                        ],
                         "style": {
                             "defaultColor": "#009bbb",
                             "useSeverity": false
@@ -118,13 +106,19 @@
                                 "fontSize": "12px",
                                 "color": "#fff"
                             }
-                        }
+                        },
+                        "annotations": [
+                            {
+                                "title": "Max. wind Gust Dir: {value}",
+                                "value": "max_wind_dir"
+                            }
+                        ]
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 4,
+                    "column": 2,
                     "row": 0,
-                    "columnSpan": 4,
+                    "columnSpan": 2,
                     "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
@@ -196,13 +190,14 @@
                                 "fontSize": "12px",
                                 "color": "#fff"
                             }
-                        }
+                        },
+                        "annotations": []
                     }
                 ],
                 "dashboardConfig": {
-                    "column": 8,
+                    "column": 4,
                     "row": 0,
-                    "columnSpan": 4,
+                    "columnSpan": 2,
                     "rowSpan": 7,
                     "interaction": false,
                     "resize": false,
