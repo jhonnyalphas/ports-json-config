@@ -87,7 +87,9 @@
                             "defaultColor": "#009bbb",
                             "useSeverity": false
                         },
-                        "legend": true,
+                        "legend": {
+                            "enabled" : true
+                        },
                         "tooltip": {
                             "isHtmlFormat": "false",
                             "valueDecimals": "2",
@@ -163,7 +165,9 @@
                             "useSeverity": true,
                             "severityValue": "wind_speed"
                         },
-                        "legend": true,
+                        "legend": {
+                            "enabled": true
+                        },
                         "tooltip": {
                             "isHtmlFormat": "false",
                             "valueDecimals": "2",

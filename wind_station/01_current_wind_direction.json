@@ -12,23 +12,13 @@
     "instanceConfig": [
         {
             "orientation": "vertical",
-            "items": [
-                {
-                    "title": "Wind Position",
-                    "unit": "",
-                    "value": "wind_position"
-                },
-                {
-                    "title": "Max. Wind Gust Dir.",
-                    "unit": "",
-                    "value": "max_wind_gust_dir"
-                }
-            ],
             "style": {
                 "defaultColor": "#009bbb",
                 "useSeverity": false
             },
-            "legend": true,
+            "legend": {
+                "enabled": true
+            },
             "tooltip": {
                 "isHtmlFormat": "false",
                 "valueDecimals": "2",

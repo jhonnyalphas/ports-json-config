@@ -12,17 +12,6 @@
     "instanceConfig": [
         {
             "orientation": "vertical",
-            "items": [
-                {
-                    "unit": "km/h",
-                    "value": "wind_speed"
-                },
-                {
-                    "title": "Max. Wind Gust",
-                    "unit": "km/h",
-                    "value": "max_wind_speed"
-                }
-            ],
             "style": {
                 "defaultColor": "#009bbb",
                 "useSeverity": false,

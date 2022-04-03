@@ -43,7 +43,9 @@
                 "useSeverity": true,
                 "severityValue": "wind_speed"
             },
-            "legend": true,
+            "legend": {
+                "enabled": true
+            },
             "tooltip": {
                 "isHtmlFormat": "false",
                 "valueDecimals": "2",
