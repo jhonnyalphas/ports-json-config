@@ -10,22 +10,32 @@
         "enableShare": true,
         "items": [
             {
+                "id": 1,
+                "module": "SIDEBAR_SELECTOR",
+                "zIndex": 0,
+                "instanceConfig": [
+                    {
+                        "type": "select",
+                        "dataSource": "SIDEBAR_SELECTION_DATA_SOURCE"
+                    }
+                ]
+            },
+            {
+                "id": 2,
                 "module": "MODULE_DISPLAY_CALENDAR",
                 "zIndex": 0,
-                "itemsConfig": [],
                 "instanceConfig": [
                     {
                         "options": {
-                            "enableDateMultiSelect": false,
                             "enableDateRange": true
                         }
                     }
                 ]
             },
             {
+                "id": 3,
                 "module": "MODULE_WIDGET_CAROUSEL",
                 "zIndex": 0,
-                "itemsConfig": [],
                 "instanceConfig": [
                     {
                         "itemShowNumber": 3,
@@ -45,15 +55,11 @@
                 ]
             },
             {
+                "id": 4,
                 "module": "MODULE_WIDGET_WATCHER",
                 "zIndex": 0,
-                "itemsConfig": [],
                 "instanceConfig": [
                     {
-                        "style": {
-                            "accentColor": "#009bbb",
-                            "defaultColor": "#009bbb"
-                        },
                         "items": [
                             {
                                 "id": "M#NETWORK_FILTER",
@@ -119,31 +125,6 @@
                             "enableVisualSettings": true,
                             "enableSqlAdvanced": false
                         }
-                    }
-                ]
-            },
-            {
-                "id": 4,
-                "module": "MODULE_WIDGET_BUSINESS_INTELLIGENCE",
-                "zIndex": 0,
-                "itemsConfig": [],
-                "instanceConfig": [
-                    {
-                        "orientation": "vertical",
-                        "style": {
-                            "accentColor": "#009bbb",
-                            "defaultColor": "#009bbb"
-                        },
-                        "items": [
-                            "SPINNER_PARAMETER_AUDIT",
-                            "SPINNER_WORST_OFFENDER",
-                            "SPINNER_EVOLUTION",
-                            "SPINNER_DRILL_DOWN",
-                            "SPINNER_CORRELATION",
-                            "SPINNER_CELL_DISTRIBUTION",
-                            "SPINNER_TROUBLESHOOTING",
-                            "SPINNER_MASTER_LIST"
-                        ]
                     }
                 ]
             }
