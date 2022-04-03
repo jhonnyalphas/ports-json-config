@@ -4,7 +4,7 @@
     "title": "Estación de Viento (Faro)",
     "sourceData": "WIND_STATION_DETAIL",
     "zIndex": 0,
-    "datetime": {
+    "dateTime": {
         "start": "",
         "end": ""
     },

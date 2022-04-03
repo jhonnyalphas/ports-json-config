@@ -11,7 +11,7 @@
         "title": "Sidebar",
         "content": [
             {
-                "type": "datetime",
+                "type": "dateTime",
                 "widget": "modern_sidebar",
                 "granularity": [
                     "24h",

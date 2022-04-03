@@ -4,7 +4,7 @@
     "title": "Solar and UV Radiation",
     "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
     "zIndex": 0,
-    "datetime": {
+    "dateTime": {
         "start": "2022-03-28T10:00:00.000Z",
         "end": "2022-03-30T10:00:00.000Z"
     },

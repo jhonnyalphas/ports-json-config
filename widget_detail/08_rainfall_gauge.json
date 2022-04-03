@@ -4,7 +4,7 @@
     "title": "Rainfall",
     "sourceData": "ACCUMULATE_RAINFALL_DATA",
     "zIndex": 0,
-    "datetime": {
+    "dateTime": {
         "start": "",
         "end": ""
     },

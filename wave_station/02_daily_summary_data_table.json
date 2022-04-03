@@ -4,7 +4,7 @@
     "title": "DAILY_SUMMARY_DATA",
     "sourceData": "WIND_STATION_DETAIL_SUMMARY",
     "zIndex": 0,
-    "datetime": {
+    "dateTime": {
         "start": "",
         "end": ""
     },

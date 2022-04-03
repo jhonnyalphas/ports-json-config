@@ -17,7 +17,7 @@
                 "title": "Current Wind Speed",
                 "sourceData": "WIND_SPEED_SENSOR_DATASOURCE",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "2022-03-29T10:00:00.000Z",
                     "end": "2022-03-30T10:00:00.000Z"
                 },
@@ -63,7 +63,7 @@
                 "title": "Current Wind Direction",
                 "sourceData": "WIND_SENSOR_DATASOURCE",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "2022-03-15T10:00:00.000Z",
                     "end": ""
                 },
@@ -124,7 +124,7 @@
                 "title": "Accumulates Wind Direction",
                 "sourceData": "WIND_SENSOR_DATASOURCE",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "2022-03-20T10:00:00.000Z",
                     "end": "2022-03-22T10:00:00.000Z"
                 },
@@ -200,7 +200,7 @@
                 "title": "Solar and UV Radiation",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "2022-03-28T10:00:00.000Z",
                     "end": "2022-03-30T10:00:00.000Z"
                 },
@@ -271,7 +271,7 @@
                 "title": "Temperature",
                 "sourceData": "TEMPERATURE_SENSOR_DATA_SOURCE",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "",
                     "end": ""
                 },
@@ -327,7 +327,7 @@
                 "title": "Estación de Viento (Faro)",
                 "sourceData": "WIND_STATION_DETAIL",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "",
                     "end": ""
                 },
@@ -458,7 +458,7 @@
                 "title": "Mareógrafo (Bocana)",
                 "sourceData": "WAVE_DATA",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "2022-03-28T10:00:00.000Z",
                     "end": "2022-03-30T10:00:00.000Z"
                 },
@@ -548,7 +548,7 @@
                 "title": "Actual Mareógrafo (Bocana)",
                 "sourceData": "WAVE_DATA_SOURCE",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "2022-03-28T10:00:00.000Z",
                     "end": "2022-03-30T10:00:00.000Z"
                 },
@@ -638,7 +638,7 @@
                 "title": "Rainfall",
                 "sourceData": "ACCUMULATE_RAINFALL_DATA",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "",
                     "end": ""
                 },
@@ -690,7 +690,7 @@
                 "title": "DAILY_SUMMARY_DATA",
                 "sourceData": "WIND_STATION_DETAIL_SUMMARY",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "",
                     "end": ""
                 },
@@ -716,7 +716,7 @@
                 "title": "DAILY_SUMMARY_DATA",
                 "sourceData": "WIND_STATION_DETAIL_SUMMARY",
                 "zIndex": 0,
-                "datetime": {
+                "dateTime": {
                     "start": "2022-03-28T10:00:00.000Z",
                     "end": ""
                 },

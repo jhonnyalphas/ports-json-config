@@ -4,7 +4,7 @@
     "title": "Current Wind Speed",
     "sourceData": "WIND_SPEED_SENSOR_DATASOURCE",
     "zIndex": 0,
-    "datetime": {
+    "dateTime": {
         "start": "2022-03-29T10:00:00.000Z",
         "end": "2022-03-30T10:00:00.000Z"
     },

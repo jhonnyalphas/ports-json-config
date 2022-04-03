@@ -4,7 +4,7 @@
     "title": "Temperature",
     "sourceData": "TEMPERATURE_SENSOR_DATA_SOURCE",
     "zIndex": 0,
-    "datetime": {
+    "dateTime": {
         "start": "",
         "end": ""
     },

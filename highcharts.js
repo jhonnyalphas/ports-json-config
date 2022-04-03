@@ -60,7 +60,7 @@ Highcharts.chart("container", {
 
   xAxis: {
     offset: 40,
-    type: "datetime",
+    type: "dateTime",
     plotLines: [
       {
         color: "#FCD401",

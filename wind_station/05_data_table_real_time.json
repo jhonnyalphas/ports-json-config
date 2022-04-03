@@ -4,7 +4,7 @@
     "title": "DAILY_SUMMARY_DATA",
     "sourceData": "WIND_STATION_DETAIL_SUMMARY",
     "zIndex": 0,
-    "datetime": {
+    "dateTime": {
         "start": "2022-03-26T10:00:00.000Z",
         "end": "2022-03-30T10:00:00.000Z"
     },
