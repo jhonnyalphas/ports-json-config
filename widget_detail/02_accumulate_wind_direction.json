@@ -59,7 +59,8 @@
                     "fontSize": "12px",
                     "color": "#fff"
                 }
-            }
+            },
+            "annotations": []
         }
     ],
     "dashboardConfig": {
