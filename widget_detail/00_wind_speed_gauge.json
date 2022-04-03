@@ -16,7 +16,13 @@
                 "defaultColor": "#009bbb",
                 "useSeverity": false,
                 "severityValue": "wind_speed"
-            }
+            },
+            "annotations": [
+                {
+                    "title": "Max. Wind Gust\n {value}",
+                    "value": "max__wind_gust"
+                }
+            ]
         }
     ],
     "dashboardConfig": {

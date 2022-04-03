@@ -21,41 +21,21 @@
                     "start": "2022-03-29T10:00:00.000Z",
                     "end": "2022-03-30T10:00:00.000Z"
                 },
-                "itemsConfig": [
-                    {
-                        "id": "K#WIND_SPEED_GAUGE||CURRENT_SPEED_VALUE",
-                        "title": "",
-                        "unit": "km/h",
-                        "value": "wind_speed"
-                    },
-                    {
-                        "id": "K#WIND_SPEED_TEXT||MAX_SPEED_VALUE",
-                        "title": "Max. Wind Gust",
-                        "unit": "km/h",
-                        "value": "max_wind_speed"
-                    }
-                ],
+                "itemsConfig": [],
                 "instanceConfig": [
                     {
-                        "id": "K#WIND_SPEED_GAUGE",
-                        "type": "solid_gauge",
-                        "orientation": "vertical",
-                        "items": [
-                            
-                        ],
-                        "style": {
-                            "defaultColor": "#009bbb",
-                            "useSeverity": false
-                        }
-                    },
-                    {
-                        "id": "K#WIND_SPEED_TEXT",
-                        "type": "text",
                         "orientation": "vertical",
                         "style": {
                             "defaultColor": "#009bbb",
-                            "useSeverity": false
-                        }
+                            "useSeverity": false,
+                            "severityValue": "wind_speed"
+                        },
+                        "annotations": [
+                            {
+                                "title": "Max. Wind Gust\n {value}",
+                                "value": "max__wind_gust"
+                            }
+                        ]
                     }
                 ],
                 "dashboardConfig": {
