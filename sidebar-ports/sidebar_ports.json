@@ -4,134 +4,126 @@
     "name": "Smart Weather",
     "type": "sidebar",
     "platform": "web",
-    "content": {
-        "width": "300",
-        "height": "*",
-        "enableShare": true,
-        "dateTime": {
-            "start": "2022-03-29T10:00:00.000Z",
-            "end": "2022-03-30T10:00:00.000Z"
+    "width": "300",
+    "height": "*",
+    "enableShare": true,
+    "dateTime": {
+        "start": "2022-03-29T10:00:00.000Z",
+        "end": "2022-03-30T10:00:00.000Z"
+    },
+    "content": [
+        {
+            "id": 1,
+            "module": "SIDEBAR_SELECTOR",
+            "config": [
+                {
+                    "type": "select",
+                    "dataSource": "SIDEBAR_SELECTION_DATA_SOURCE"
+                }
+            ]
         },
-        "items": [
-            {
-                "id": 1,
-                "module": "SIDEBAR_SELECTOR",
-                "zIndex": 0,
-                "instanceConfig": [
-                    {
-                        "type": "select",
-                        "dataSource": "SIDEBAR_SELECTION_DATA_SOURCE"
+        {
+            "id": 2,
+            "module": "MODULE_DISPLAY_CALENDAR",
+            "config": [
+                {
+                    "type": "calendarDisplay",
+                    "options": {
+                        "enableDateRange": true
                     }
-                ]
-            },
-            {
-                "id": 2,
-                "module": "MODULE_DISPLAY_CALENDAR",
-                "zIndex": 0,
-                "instanceConfig": [
-                    {
-                        "options": {
-                            "enableDateRange": true
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "module": "MODULE_WIDGET_CAROUSEL",
+            "config": [
+                {
+                    "type": "widgetCarousel",
+                    "itemShowNumber": 3,
+                    "items": [
+                        "WIDGET_COMPARE_CHART",
+                        "WIDGET_DELTA_TABLE",
+                        "WIDGET_DATA_TABLE",
+                        "WIDGET_GIS",
+                        "WIDGET_PIE",
+                        "WIDGET_GRAPH",
+                        "WIDGET_WIND_ROSE",
+                        "WIDGET_GAUGE",
+                        "WIDGET_SENSOR",
+                        "WIDGET_THERMAL"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "module": "MODULE_WIDGET_WATCHER",
+            "config": [
+                {
+                    "id": "M#NETWORK_FILTER",
+                    "type": "filter",
+                    "url": "NETWORK_URL",
+                    "filters": [
+                        {
+                            "id": "F#NETWORK_SEARCH",
+                            "name": "network",
+                            "type": "text",
+                            "url": "",
+                            "queryParam": "query",
+                            "parent": ""
+                        },
+                        {
+                            "id": "F#SENSOR_SELECT",
+                            "name": "sensor",
+                            "type": "select",
+                            "url": "",
+                            "queryParam": "query",
+                            "parent": "F#NETWORK_SEARCH"
+                        },
+                        {
+                            "id": "F#LOCATION_SELECT",
+                            "name": "location",
+                            "type": "select",
+                            "url": "",
+                            "queryParam": "query",
+                            "parent": "F#SENSOR_SELECT"
                         }
-                    }
-                ]
-            },
-            {
-                "id": 3,
-                "module": "MODULE_WIDGET_CAROUSEL",
-                "zIndex": 0,
-                "instanceConfig": [
-                    {
-                        "itemShowNumber": 3,
-                        "items": [
-                            "WIDGET_COMPARE_CHART",
-                            "WIDGET_DELTA_TABLE",
-                            "WIDGET_DATA_TABLE",
-                            "WIDGET_GIS",
-                            "WIDGET_PIE",
-                            "WIDGET_GRAPH",
-                            "WIDGET_WIND_ROSE",
-                            "WIDGET_GAUGE",
-                            "WIDGET_SENSOR",
-                            "WIDGET_THERMAL"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": 4,
-                "module": "MODULE_WIDGET_WATCHER",
-                "zIndex": 0,
-                "instanceConfig": [
-                    {
-                        "items": [
-                            {
-                                "id": "M#NETWORK_FILTER",
-                                "type": "filter",
-                                "url": "NETWORK_URL",
-                                "filters": [
-                                    {
-                                        "id": "F#NETWORK_SEARCH",
-                                        "name": "network",
-                                        "type": "text",
-                                        "url": "",
-                                        "queryParam": "query",
-                                        "parent": ""
-                                    },
-                                    {
-                                        "id": "F#SENSOR_SELECT",
-                                        "name": "sensor",
-                                        "type": "select",
-                                        "url": "",
-                                        "queryParam": "query",
-                                        "parent": "F#NETWORK_SEARCH"
-                                    },
-                                    {
-                                        "id": "F#LOCATION_SELECT",
-                                        "name": "location",
-                                        "type": "select",
-                                        "url": "",
-                                        "queryParam": "query",
-                                        "parent": "F#SENSOR_SELECT"
-                                    }
-                                ]
-                            },
-                            {
-                                "id": "M#NETWORK_FILTER",
-                                "type": "filter",
-                                "url": "NETWORK_URL",
-                                "filters": [
-                                    {
-                                        "id": "F#NETWORK_SEARCH",
-                                        "name": "network",
-                                        "type": "text",
-                                        "url": "",
-                                        "queryParam": "network"
-                                    },
-                                    {
-                                        "id": "F#SENSOR_SELECT||NETWORK_SEARCH",
-                                        "name": "sensor",
-                                        "type": "select",
-                                        "url": "",
-                                        "queryParam": "sensor"
-                                    },
-                                    {
-                                        "id": "F#LOCATION_SELECT||SENSOR_SELECT",
-                                        "name": "location",
-                                        "type": "select",
-                                        "url": "",
-                                        "queryParam": "location"
-                                    }
-                                ]
-                            }
-                        ],
-                        "options": {
-                            "enableVisualSettings": true,
-                            "enableSqlAdvanced": false
+                    ]
+                },
+                {
+                    "id": "M#NETWORK_FILTER",
+                    "type": "filter",
+                    "url": "NETWORK_URL",
+                    "filters": [
+                        {
+                            "id": "F#NETWORK_SEARCH",
+                            "name": "network",
+                            "type": "text",
+                            "url": "",
+                            "queryParam": "network"
+                        },
+                        {
+                            "id": "F#SENSOR_SELECT||NETWORK_SEARCH",
+                            "name": "sensor",
+                            "type": "select",
+                            "url": "",
+                            "queryParam": "sensor"
+                        },
+                        {
+                            "id": "F#LOCATION_SELECT||SENSOR_SELECT",
+                            "name": "location",
+                            "type": "select",
+                            "url": "",
+                            "queryParam": "location"
                         }
-                    }
-                ]
+                    ]
+                }
+            ],
+            "options": {
+                "enableVisualSettings": true,
+                "enableSqlAdvanced": false
             }
-        ]
-    }
+        }
+    ]
 }
