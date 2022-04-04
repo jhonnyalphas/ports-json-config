@@ -8,6 +8,10 @@
         "width": "300",
         "height": "*",
         "enableShare": true,
+        "dateTime": {
+            "start": "2022-03-29T10:00:00.000Z",
+            "end": "2022-03-30T10:00:00.000Z"
+        },
         "items": [
             {
                 "id": 1,
