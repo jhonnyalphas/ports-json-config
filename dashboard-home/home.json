@@ -14,7 +14,6 @@
             {
                 "id": "1",
                 "widget": "SENSOR_BLOCKS",
-                "title": "ESTACIÓN DE VIENTO (FARO)",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
                 "itemsConfig": [],
@@ -67,7 +66,6 @@
             {
                 "id": "2",
                 "widget": "SENSOR_BLOCKS",
-                "title": "ESTACIÓN DE VIENTO (FARO)",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
                 "itemsConfig": [],
@@ -120,7 +118,6 @@
             {
                 "id": "3",
                 "widget": "SENSOR_BLOCKS",
-                "title": "ESTACIÓN DE VIENTO (FARO)",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
                 "itemsConfig": [],
@@ -173,7 +170,6 @@
             {
                 "id": "4",
                 "widget": "SENSOR_BLOCKS",
-                "title": "ESTACIÓN DE VIENTO (TERMINAL)",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
                 "itemsConfig": [],
@@ -212,7 +208,6 @@
             {
                 "id": "8",
                 "widget": "SENSOR_BLOCKS",
-                "title": "ESTACIÓN DE VIENTO (TERMINAL)",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
                 "itemsConfig": [],
@@ -251,7 +246,6 @@
             {
                 "id": "9",
                 "widget": "SENSOR_BLOCKS",
-                "title": "ESTACIÓN DE VIENTO (TERMINAL)",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
                 "itemsConfig": [],
@@ -290,7 +284,6 @@
             {
                 "id": "5",
                 "widget": "SENSOR_BLOCKS",
-                "title": "ESTACIÓN DE VIENTO (EXTERIOR)",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
                 "itemsConfig": [],
@@ -358,7 +351,6 @@
             {
                 "id": "6",
                 "widget": "SENSOR_BLOCKS",
-                "title": "MAREÓGRAFO (BOCANA)",
                 "sourceData": "http://meteoclim.meteoclim.com/apptrack/public/portsib/prediction/combination/last",
                 "zIndex": 0,
                 "itemsConfig": [],
@@ -426,7 +418,6 @@
             {
                 "id": "7",
                 "widget": "GIS_MAP",
-                "title": "Rentabilidad por mercado",
                 "sourceData": "DEMO_GIS_RETABILIDAD",
                 "zIndex": 0,
                 "itemsConfig": [],
