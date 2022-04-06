@@ -335,20 +335,6 @@
                                 "2": "#EA6D13",
                                 "3": "#CA2C36"
                             },
-                            "color": [
-                                {
-                                    "condition": "{value} < 100",
-                                    "value": "#ff0000"
-                                },
-                                {
-                                    "condition": "{value} >= 100 && {value} <= 130",
-                                    "value": "#ffa500"
-                                },
-                                {
-                                    "condition": "{value} > 130",
-                                    "value": "#ffff00"
-                                }
-                            ],
                             "defaultColor": "#ffffff",
                             "useSeverity": true,
                             "severityValue": "VFinalCombinada"
